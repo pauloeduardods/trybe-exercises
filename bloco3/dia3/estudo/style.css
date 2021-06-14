@@ -1,0 +1,35 @@
+.subtitles{
+    color: blue;
+    background-color: bisque;
+}
+.content{
+    background-color: burlywood;
+}
+.imagem{
+    position:relative;
+    text-align: center;
+    padding: 15px;
+    /* parte vazia entre o conteudo ea borda */
+    width: 85%;
+    height: 60%;
+    border-style: dotted;
+    /* controla o estilo da borda */
+    border-color:blue;
+}
+.ola{
+    color: blue;
+    background-color: rgb(255,200, 255);
+}
+.alimentacao{
+    background-color: seagreen;
+    width: 90%;
+    height:100px;
+    /* se parar aqui fica bugado com o texto fugindo da linha */
+    overflow: auto;
+    /* vem default como visible (oq causa o "bug"), hidden esconde o conteudo, auto cria um scrow */
+    /* overflow-y: 50px; */
+    /* overflow-x: auto; */
+    /* da para escolher o tamanho certo para o elemento do scrow usando overflow-y e overflow-x */
+    /* display: inline-block */
+    /* tudo em uma linha */
+}
