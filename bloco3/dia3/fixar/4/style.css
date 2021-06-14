@@ -1,0 +1,53 @@
+ol li {
+    background-color: yellow;
+}
+ol li:nth-child(2n){
+    color:green;
+}
+ol li:nth-child(2n + 1){
+    text-transform: uppercase;
+}
+h1, h2, h3{
+    color:red
+}
+h1 em, h2 em, h3 em{
+    font-size: 40px;
+    border:1px solid black
+}
+li {
+    font-size: 20px;
+}
+li em {
+    font-weight:bolder;
+}
+.linguagens-programacao li:nth-child(1),.linguagens-programacao li:nth-child(2), .linguagens-programacao li:nth-child(3) {
+    color: blue;
+}
+.linguagens-programacao li[content^="Java"]{
+    background-color: pink;
+    /* content^ = starts with content$ = ends with content* = evert element that have content  --> have anothers look at https://www.w3schools.com/cssref/css_selectors.asp*/
+}
+a:hover {
+    font-weight: bolder;
+}
+#w3shools:hover{
+    color:green;
+}
+#stackoverflow:hover{
+    color: orange;
+}
+#mdn:hover{
+    color:black; 
+}
+#devdocs:hover{
+    color: yellow;
+}
+#trybe:hover{
+    color:green;
+}
+/*  */
+/*  */
+/* como mudar o parametro do h1 h2 e h3 nesse caso, pois ele altera do EM */
+/*  */
+/*  */
+/*  */
