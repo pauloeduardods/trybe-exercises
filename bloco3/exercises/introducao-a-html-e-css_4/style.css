@@ -38,7 +38,7 @@ main{
   position: absolute;
   z-index: 1;
 }
-table{
+table, tr, td{
   border: 1px solid black;
 }
 h1, h2{
