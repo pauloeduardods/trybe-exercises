@@ -48,15 +48,18 @@ table, tr, td, th{
   border: 1px solid black;
   border-collapse: collapse;
 }
+table caption{
+  display: none;
+}
 .info-table{
   width: 360px;
-  margin-bottom: 20px;
   margin:0 auto;
+  margin-bottom: 40px;
   text-align: center;
   font-size: 19px;
 }
 .general-info{
-  min-height: 460px;
+  min-height: 520px;
   padding-bottom: 13px;
   margin-bottom: 10px;
   border-bottom:1px solid rgb(170, 170, 170);
