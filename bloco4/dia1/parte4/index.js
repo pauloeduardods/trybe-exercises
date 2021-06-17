@@ -6,5 +6,3 @@ const checker = (score) => {
         "Algo de errado aconteceu"
     }
 }
-
-`Usar a funcao no console do navegador`

@@ -8,4 +8,3 @@ const checker = state => {
       break
     }
 }
-`usar no console do navegador`
