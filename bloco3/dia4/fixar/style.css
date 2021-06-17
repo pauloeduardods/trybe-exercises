@@ -31,5 +31,11 @@ h1 {
     width: 300px;
   }
   .award{
-      color: aliceblue;
+      margin-left: 90px;
+  }
+  .award ul li{
+      display: inline-block;
+  }
+  .award h3{
+      margin-left: 260px;
   }
