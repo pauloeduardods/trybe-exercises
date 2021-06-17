@@ -34,6 +34,31 @@ header{
   margin-left: 10%;
   display: inline-block;
 }
+.contact{
+  position: fixed;
+  height: 100%;
+  top: 77px;
+  border-right: 1px solid black;
+  background-color: rgb(240, 240, 240);
+  width: 75px;
+  z-index: 1000;
+}
+
+.contact ul {
+  list-style: none;
+  padding-inline-start:0;
+  width: 50px;
+  padding-left: 12px;
+  height: 80%;
+  overflow-y: auto;
+  padding-top: 100%;
+}
+.contact ul li{
+  margin-bottom: 120px;
+}
+.aside-image{
+  width: 50px;
+}
 main{
   width: 70%;
   height: auto;
