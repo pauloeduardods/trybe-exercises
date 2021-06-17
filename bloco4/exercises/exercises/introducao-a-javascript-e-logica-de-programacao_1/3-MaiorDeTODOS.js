@@ -1,11 +1,9 @@
-const greater = (...params) => {
-    var maior
-    for (let i = 0; i < params.length; i++){
-        if (maior == null) maior = params[i]
-        if (maior < params[i]) maior = params[i]       
-    }
-    return maior
+const greater = (...numbers) => {
+  var maior
+  for (let i = 0; i < numbers.length; i++){
+    if (maior == null) maior = numbers[i]
+    if (maior < numbers[i]) maior = numbers[i]
+  }
+  return maior
 }
-console.log(greater(10, 11, 24 ,4))
-
-`Maior de qualquer numero`
+console.log(greater(10,'ola', 24 ,4))
