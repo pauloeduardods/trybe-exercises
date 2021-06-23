@@ -1,4 +1,4 @@
-let numbers = [45, 27, 57, 1330, 560, 800, 200, 70, 945, 54]
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 numbers = numbers.sort((a,b) => (b - a))
 
