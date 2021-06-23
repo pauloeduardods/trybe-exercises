@@ -8,4 +8,4 @@ for (number of numbers){
 
 media = media / numbers.length
 
-console.log("media = ", media)
+media > 20? console.log("valor maior q 20") : console.log("valor menor ou igual a 20")
