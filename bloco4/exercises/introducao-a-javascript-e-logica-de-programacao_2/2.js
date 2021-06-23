@@ -6,4 +6,4 @@ for(number of numbers){
   result += number
 }
 
-console.log(result)
+console.log("soma = ", result)
