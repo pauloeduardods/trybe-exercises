@@ -1,5 +1,5 @@
-let graus = 20
+let fahrenheit = 20
 
-let fahrenheit = graus * 1.8 + 32
+let graus = (fahrenheit - 32)/1.8
 
-console.log(fahrenheit)
+console.log(graus)
