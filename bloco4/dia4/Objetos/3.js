@@ -6,5 +6,5 @@ let player = {
     golden: 2,
     silver: 3
   }
-}
-player['bestInTheWorld'] = [2006, 2007, 2008, 2009, 2010, 2018]
+};
+player['bestInTheWorld'] = [2006, 2007, 2008, 2009, 2010, 2018];

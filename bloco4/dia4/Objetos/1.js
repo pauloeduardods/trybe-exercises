@@ -6,4 +6,4 @@ let player = {
     golden: 2,
     silver: 3
   }
-}
+};

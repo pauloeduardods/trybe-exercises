@@ -5,5 +5,5 @@ let names = {
 };
 
 for(index in names){
-  console.log(`Ola ${names[index]}`)
+  console.log(`Ola ${names[index]}`);
 }

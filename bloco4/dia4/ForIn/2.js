@@ -5,4 +5,4 @@ let car = {
 };
 for(key in car){
   console.log(key);
-}
+};
