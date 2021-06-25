@@ -1,4 +1,5 @@
-let array = [2, 3, 2, 5, 8, 8, 8, 8, 8, 2, 3, 3, 3];
+let array = [2, 3, 2, 5, 8, 2, 3];
+let array1 = [2, 3, 2, 5, 8, 8, 8, 8, 8, 2, 3, 3, 3];
 
 const moreRepeats = array => {
   let cache = {};
@@ -13,3 +14,4 @@ const moreRepeats = array => {
 };
 
 console.log(moreRepeats(array));
+console.log(moreRepeats(array1));
