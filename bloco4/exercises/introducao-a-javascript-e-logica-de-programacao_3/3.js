@@ -7,7 +7,7 @@ for(let i = 0; i < n; i += 1){
   for(let i1 = 0; i1 < n - n1; i1 += 1){
     string += ' '
   }
-  for(let i2 = 0; i2 < n1; i2 += 1){
+  for(let i1 = 0; i1 < n1; i1 += 1){
     string += '*'
   }
   console.log(string)
