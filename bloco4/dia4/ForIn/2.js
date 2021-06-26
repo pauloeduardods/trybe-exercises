@@ -3,6 +3,6 @@ let car = {
   manufacturer: 'Audi',
   year: 2020
 };
-for(key in car){
+for(let key in car){
   console.log(key);
 };
