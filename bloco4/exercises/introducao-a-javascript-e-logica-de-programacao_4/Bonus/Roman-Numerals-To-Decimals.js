@@ -9,7 +9,7 @@ const romanNumeralsToDecimals = string => {
     m : 1000,
     v1 : 5000
   };
-  string = string.toLocaleLowerCase();
+  string = string.toLowerCase();
   let result = 0;
   for(let i = 0; i < string.length; i += 1){
     if(romanNumerals[string[i + 1]] === undefined) {
