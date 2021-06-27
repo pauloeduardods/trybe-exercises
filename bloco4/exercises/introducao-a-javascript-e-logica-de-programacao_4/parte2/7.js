@@ -10,3 +10,4 @@ const verifier = (word, endsWith) => {
 };
 
 console.log(verifier('trybe', 'be'))
+console.log(verifier('joaofernando', 'fernan'))
