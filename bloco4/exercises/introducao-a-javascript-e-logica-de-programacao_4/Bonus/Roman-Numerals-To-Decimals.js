@@ -24,7 +24,7 @@ const romanNumeralsToDecimals = string => {
         i += 2;
       }else{
         result += currentNum + nextNum;
-        i += 1
+        i += 1;
       };
     };
     if(currentNum > nextNum) result += currentNum;
