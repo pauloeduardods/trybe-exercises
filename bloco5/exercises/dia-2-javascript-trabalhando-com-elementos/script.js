@@ -29,3 +29,6 @@ for (let i = 1; i < 11; i += 1) {
   createUl.appendChild(createLi);
 }
 document.querySelector('.right-content').appendChild(createUl);
+for (let i = 0; i < 3; i += 1){
+  document.querySelector('.main-content').appendChild(document.createElement('h3'))
+}
