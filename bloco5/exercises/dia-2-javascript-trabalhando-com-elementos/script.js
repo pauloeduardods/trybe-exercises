@@ -40,5 +40,8 @@ for (let i = 0; i < classToH3.length; i += 1) {
 document.querySelector('.main-content').removeChild(document.querySelector('.left-content'));
 document.querySelector('.right-content').style.marginRight = 'auto';
 document.querySelector('.center-content').style.backgroundColor = 'green';
-let removeTwo = document.querySelector('ul').childNodes
-console.log(removeTwo)
+let removeTwo = document.querySelector('ul').childNodes;
+for (let i = removeTwo.length - 2; i < removeTwo.length; i += 1){
+  document.querySelector('ul').removeChild(removeTwo[i]);
+  i -= 1; // pois quando remove 1 ele altera o index do array, e remover 1 é a mesma coisa de i - 1
+}
