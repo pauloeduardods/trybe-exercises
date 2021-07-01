@@ -39,3 +39,6 @@ for (let i = 0; i < classToH3.length; i += 1) {
 }
 document.querySelector('.main-content').removeChild(document.querySelector('.left-content'));
 document.querySelector('.right-content').style.marginRight = 'auto';
+document.querySelector('.center-content').style.backgroundColor = 'green';
+let removeTwo = document.querySelector('ul').childNodes
+console.log(removeTwo)
