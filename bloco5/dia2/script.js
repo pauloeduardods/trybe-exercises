@@ -30,7 +30,7 @@ const verifier = (idName, include) => {
     }
     else {
       elements.removeChild(elementsList[index]);
-      index -= 1; //quando remove muda o tamanho do array e voce tem q voltar 1 no index para verificar o q seria o proximo
+      index -= 1; //quando remove muda o tamanho do array e voce tem q voltar 1 (oq foi removido no caso) no index para verificar o q seria o proximo
     }
   }
 }
