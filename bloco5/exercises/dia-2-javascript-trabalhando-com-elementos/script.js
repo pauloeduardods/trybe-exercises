@@ -30,10 +30,11 @@ for (let i = 1; i < 11; i += 1) {
 }
 document.querySelector('.right-content').appendChild(createUl);
 for (let i = 0; i < 3; i += 1) {
-  document.querySelector('.main-content').appendChild(document.createElement('h3'))
+  document.querySelector('.main-content').appendChild(document.createElement('h3'));
 }
-document.querySelector('h1').className = 'title'
-let classToH3 = document.querySelector('.main-content').querySelectorAll('h3')
+document.querySelector('h1').className = 'title';
+let classToH3 = document.querySelector('.main-content').querySelectorAll('h3');
 for (let i = 0; i < classToH3.length; i += 1) {
-  classToH3[i].className = 'description'
+  classToH3[i].className = 'description';
 }
+document.querySelector('.main-content').removeChild(document.querySelector('.left-content'));
