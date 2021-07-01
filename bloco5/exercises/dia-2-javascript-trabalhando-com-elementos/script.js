@@ -38,3 +38,4 @@ for (let i = 0; i < classToH3.length; i += 1) {
   classToH3[i].className = 'description';
 }
 document.querySelector('.main-content').removeChild(document.querySelector('.left-content'));
+document.querySelector('.right-content').style.marginRight = 'auto';
