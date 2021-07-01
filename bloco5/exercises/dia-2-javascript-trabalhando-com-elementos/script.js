@@ -22,3 +22,10 @@ let createImage = document.createElement('img');
 createImage.src = 'https://picsum.photos/200';
 createImage.className = 'small-image';
 document.querySelector('.left-content').appendChild(createImage);
+let createUl = document.createElement('ul');
+for (let i = 1; i < 11; i += 1) {
+  let createLi = document.createElement('li');
+  createLi.innerText = i;
+  createUl.appendChild(createLi);
+}
+document.querySelector('.right-content').appendChild(createUl);
