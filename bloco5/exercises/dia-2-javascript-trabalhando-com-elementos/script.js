@@ -18,3 +18,7 @@ document.querySelector('.main-content').appendChild(createLeftContent);
 let createRightContent = document.createElement('div');
 createRightContent.className = 'right-content';
 document.querySelector('.main-content').appendChild(createRightContent);
+let createImage = document.createElement('img');
+createImage.src = 'https://picsum.photos/200';
+createImage.className = 'small-image';
+document.querySelector('.left-content').appendChild(createImage);
