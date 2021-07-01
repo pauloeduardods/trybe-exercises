@@ -19,3 +19,19 @@ document.getElementById('primeiroFilhoDoFilho').appendChild(document.createEleme
 console.log(document.getElementById('primeiroFilhoDoFilho').firstElementChild.nextElementSibling.parentNode.nextElementSibling.nextElementSibling);
 
 //part3
+
+const include = ['pai', 'elementoOndeVoceEsta', 'primeiroFilhoDoFilho'];
+const verifier = (idName, include) => {
+  let elements = document.querySelector(`#${idName}`);
+  let elementsList = elements.childNodes;
+  for (let index = 0; index < elementsList.length; index += 1) {
+    if (include.includes(elementsList[index].id)) {
+      verifier(elementsList[index].id, include.filter(value => value !== elementsList[index].id));
+    }
+    else {
+      elements.removeChild(elementsList[index]);
+      index -= 1; //quando remove muda o tamanho do array e voce tem q voltar 1 no index para verificar o q seria o proximo
+    }
+  }
+}
+verifier('paiDoPai', include);
