@@ -16,5 +16,5 @@ let createLeftContent = document.createElement('div');
 createLeftContent.className = 'left-content';
 document.querySelector('.main-content').appendChild(createLeftContent);
 let createRightContent = document.createElement('div');
-createRightContent.className = 'left-content';
+createRightContent.className = 'right-content';
 document.querySelector('.main-content').appendChild(createRightContent);
