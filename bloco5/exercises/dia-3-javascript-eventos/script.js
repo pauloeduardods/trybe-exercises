@@ -69,8 +69,7 @@ function showFridays() {
   let oldText = [];
   const newText = 'Sextou CARAIO';
   document.querySelector('#btn-friday').addEventListener('click', function(){
-    console.log(oldText)
-    for (let i in fridays) {
+    for (let i = 0; i < fridays.length; i += 1) {
       if (fridays[i].innerText === newText) {
         fridays[i].innerText = oldText[i];
       } else {
@@ -80,4 +79,4 @@ function showFridays() {
     }
   });
 }
-showFridays();
+showFridays()
