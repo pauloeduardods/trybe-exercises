@@ -53,3 +53,13 @@ function showHolidays() {
     day.style.backgroundColor = newColor;
   }
 }
+
+function createFridayButton(string) {
+  const buttonsContainer = document.querySelector('.buttons-container');
+  let createButton = document.createElement('button');
+  createButton.id = 'btn-friday';
+  createButton.innerText = string;
+  buttonsContainer.appendChild(createButton);
+}
+
+createFridayButton('Sexta-feira');
