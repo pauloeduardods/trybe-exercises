@@ -148,6 +148,10 @@ document.querySelector('#btn-add').addEventListener('click', createTaskList);
 function createTaskList() {
   const taskContainer = document.querySelector('.task-list');
   const task = document.querySelector('#task-input').value;
+  if(!task) {
+    alert('Como vou adicionar nada em seu jumento');
+    return;
+  }
   document.querySelector('#task-input').value = '';
   const createElement = document.createElement('li');
   createElement.innerText = task;
