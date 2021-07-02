@@ -18,6 +18,18 @@ a cor do mesmo;
 
 Segue abaixo um exemplo do uso de event.target:
 */
+divUm.addEventListener('click', changeTechClass);
+divDois.addEventListener('click', changeTechClass);
+divTres.addEventListener('click', changeTechClass);
+
+function changeTechClass(event) {
+  let elementsTech = document.querySelectorAll('.tech');
+  for (let element of elementsTech) {
+    element.className = '';
+  }
+  event.target.className = 'tech';
+}
+
 
 function resetText(event) {
   // O Event é passado como um parâmetro para a função.
