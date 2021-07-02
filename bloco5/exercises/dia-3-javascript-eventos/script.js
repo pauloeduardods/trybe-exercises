@@ -100,7 +100,16 @@ function createTask() {
   const task = document.querySelector('#task-input').value;
   document.querySelector('#task-input').value = '';
   const createElement = document.createElement('span');
+  createTaskColor('green')
   createElement.innerText = task;
   taskContainer.appendChild(createElement);
-  taskContainer.appendChild(document.createElement('br'))
+  taskContainer.appendChild(document.createElement('br'));
+}
+
+function createTaskColor(color) {
+  const taskContainer = document.querySelector('.my-tasks');
+  const newTaskColor = document.createElement('div');
+  newTaskColor.style.backgroundColor = color;
+  newTaskColor.classList.add('task');
+  taskContainer.appendChild(newTaskColor);
 }
