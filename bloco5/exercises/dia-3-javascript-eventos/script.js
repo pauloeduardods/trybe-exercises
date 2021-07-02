@@ -80,3 +80,15 @@ function showFridays() {
   });
 }
 showFridays()
+
+document.querySelector('#days').addEventListener('mouseover', zoomIn);
+document.querySelector('#days').addEventListener('mouseout', zoomOut);
+
+function zoomIn(event) {
+  event.target.style.fontSize = '30px';
+  event.target.style.fontWeight = '600';
+}
+function zoomOut(event) {
+  event.target.style.fontSize = '20px';
+  event.target.style.fontWeight = '200';
+}
