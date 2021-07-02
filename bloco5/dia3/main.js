@@ -38,6 +38,13 @@ function changeText(event) {
   document.querySelector('.tech').innerText = newText; 
 }
 
+myWebpage.addEventListener('dblclick', redirect);
+
+function redirect() {
+  // window.location.href = 'https://github.com/pauloeduardods';  //redirect
+  window.open('https://github.com/pauloeduardods'); //open another page
+}
+
 function resetText(event) {
   // O Event é passado como um parâmetro para a função.
   event.target.innerText = 'Opção reiniciada';
