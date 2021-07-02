@@ -30,6 +30,13 @@ function changeTechClass(event) {
   event.target.className = 'tech';
 }
 
+input.addEventListener('keyup', changeText);
+
+
+function changeText(event) {
+  let newText = event.target.value;
+  document.querySelector('.tech').innerText = newText; 
+}
 
 function resetText(event) {
   // O Event é passado como um parâmetro para a função.
