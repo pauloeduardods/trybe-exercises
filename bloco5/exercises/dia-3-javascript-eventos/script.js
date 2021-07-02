@@ -12,3 +12,22 @@ function createDaysOfTheWeek() {
 };
 
 createDaysOfTheWeek();
+
+const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+const holidays = [24, 25, 31];
+const fridays = [4, 11, 18, 25];
+
+function addDaysOfTheMonth(daysList, holidayList, fridayList) {
+  const monthDaysList = document.querySelector('#days');
+
+  for (let day of daysList) {
+    let createDay = document.createElement('li');
+    if (holidayList.includes(day)) createDay.classList.add('holiday');
+    if (fridayList.includes(day)) createDay.classList.add('friday');
+    createDay.classList.add('day');
+    createDay.innerText = day;
+    monthDaysList.appendChild(createDay);
+  }
+}
+
+addDaysOfTheMonth(dezDaysList, holidays, fridays)
