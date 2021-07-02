@@ -100,9 +100,9 @@ function createTask() {
   const task = document.querySelector('#task-input').value;
   document.querySelector('#task-input').value = '';
   const createElement = document.createElement('span');
-  createTaskColor('green')
   createElement.innerText = task;
   taskContainer.appendChild(createElement);
+  createTaskColor('green');
   taskContainer.appendChild(document.createElement('br'));
 }
 
@@ -113,3 +113,18 @@ function createTaskColor(color) {
   newTaskColor.classList.add('task');
   taskContainer.appendChild(newTaskColor);
 }
+
+function taskSelect(){
+  document.querySelector('.my-tasks').addEventListener('click', changeTaskColor);
+  function changeTaskColor(event) {
+    let elemetClass = event.target.classList;
+    if (elemetClass.length === 2) {
+      event.target.classList.remove('selected')
+    } else if (elemetClass.length === 1) {
+      event.target.classList.add('selected')
+    }
+  }
+}
+taskSelect();
+
+//inverti a orde isso era pra ser feito em compromisso mas ja era nao vo mudar
