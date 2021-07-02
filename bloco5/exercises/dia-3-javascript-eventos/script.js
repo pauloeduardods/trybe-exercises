@@ -125,6 +125,24 @@ function taskSelect(){
 }
 taskSelect();
 
+function changeDayColor() {
+  document.getElementById('days').addEventListener('click', changeColor);
+  function changeColor(event) {
+    if (!document.querySelector('.selected')) {
+      alert('Selecione sua tarefa');
+      return;
+    }
+    const selectedTask = document.querySelector('.selected').style.backgroundColor;
+    let currentColor = event.target.style.color;
+    if (currentColor === selectedTask) {
+      event.target.style.color = 'rgb(119,119,119)';
+    } else {
+      event.target.style.color = selectedTask;
+    }
+  }
+}
+changeDayColor();
+
 document.querySelector('#btn-add').addEventListener('click', createTaskList);
 
 function createTaskList() {
