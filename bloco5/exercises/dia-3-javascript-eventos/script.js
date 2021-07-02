@@ -36,8 +36,20 @@ function createHolidayButton(string) {
   const buttonsContainer = document.querySelector('.buttons-container');
   let createButton = document.createElement('button');
   createButton.id = ('btn-holiday');
-  createButton.innerText = string
-  buttonsContainer.appendChild(createButton)
+  createButton.innerText = string;
+  buttonsContainer.appendChild(createButton);
 }
 
-createHolidayButton('Feriados')
+createHolidayButton('Feriados');
+
+document.querySelector('#btn-holiday').addEventListener('click', showHolidays);
+
+function showHolidays() {
+  let holidays = document.querySelectorAll('.holiday');
+  let currentColor = holidays[0].style.backgroundColor;
+  let newColor = 'white';
+  if (currentColor === 'white') newColor = 'rgb(238,238,238)';
+  for (let day of holidays) {
+    day.style.backgroundColor = newColor;
+  }
+}
