@@ -25,7 +25,7 @@ divTres.addEventListener('click', changeTechClass);
 function changeTechClass(event) {
   let elementsTech = document.querySelectorAll('.tech');
   for (let element of elementsTech) {
-    element.className = '';
+    element.classList.remove('tech');
   }
   event.target.className = 'tech';
 }
