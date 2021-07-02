@@ -45,6 +45,16 @@ function redirect() {
   window.open('https://github.com/pauloeduardods'); //open another page
 }
 
+myWebpage.addEventListener('mouseover', changeColor);
+myWebpage.addEventListener('mouseout', defaultColor);
+
+function changeColor(event) {
+  event.target.style.color = 'green'
+}
+function defaultColor(event) {
+  event.target.style.color = 'white'
+}
+
 function resetText(event) {
   // O Event é passado como um parâmetro para a função.
   event.target.innerText = 'Opção reiniciada';
