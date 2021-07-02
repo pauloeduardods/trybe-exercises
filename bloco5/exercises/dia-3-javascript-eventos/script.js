@@ -17,7 +17,7 @@ function addDaysOfTheMonth(daysList, holidayList, fridayList) {
   const monthDaysList = document.querySelector('#days');
 
   for (let day of daysList) {
-    let createDay = document.createElement('li');
+    const createDay = document.createElement('li');
     if (holidayList.includes(day)) createDay.classList.add('holiday');
     if (fridayList.includes(day)) createDay.classList.add('friday');
     createDay.classList.add('day');
@@ -34,7 +34,7 @@ addDaysOfTheMonth(dezDaysList, holidays, fridays)
 
 function createHolidayButton(string) {
   const buttonsContainer = document.querySelector('.buttons-container');
-  let createButton = document.createElement('button');
+  const createButton = document.createElement('button');
   createButton.id = ('btn-holiday');
   createButton.innerText = string;
   buttonsContainer.appendChild(createButton);
@@ -45,8 +45,8 @@ createHolidayButton('Feriados');
 document.querySelector('#btn-holiday').addEventListener('click', showHolidays);
 
 function showHolidays() {
-  let holidays = document.querySelectorAll('.holiday');
-  let currentColor = holidays[0].style.backgroundColor;
+  const holidays = document.querySelectorAll('.holiday');
+  const currentColor = holidays[0].style.backgroundColor;
   let newColor = 'white';
   if (currentColor === 'white') newColor = 'rgb(238,238,238)';
   for (let day of holidays) {
@@ -56,10 +56,28 @@ function showHolidays() {
 
 function createFridayButton(string) {
   const buttonsContainer = document.querySelector('.buttons-container');
-  let createButton = document.createElement('button');
+  const createButton = document.createElement('button');
   createButton.id = 'btn-friday';
   createButton.innerText = string;
   buttonsContainer.appendChild(createButton);
 }
 
 createFridayButton('Sexta-feira');
+
+function showFridays() {
+  const fridays = document.querySelectorAll('.friday');
+  let oldText = [];
+  const newText = 'Sextou CARAIO';
+  document.querySelector('#btn-friday').addEventListener('click', function(){
+    console.log(oldText)
+    for (let i in fridays) {
+      if (fridays[i].innerText === newText) {
+        fridays[i].innerText = oldText[i];
+      } else {
+        oldText[i] = fridays[i].innerText;
+        fridays[i].innerText = newText;
+      }
+    }
+  });
+}
+showFridays();
