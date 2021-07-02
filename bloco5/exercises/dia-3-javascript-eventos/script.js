@@ -93,18 +93,16 @@ function zoomOut(event) {
   event.target.style.fontWeight = '200';
 }
 
-document.querySelector('#btn-add').addEventListener('click', createTask);
-
-function createTask() {
-  const taskContainer = document.querySelector('.my-tasks');
-  const task = document.querySelector('#task-input').value;
-  document.querySelector('#task-input').value = '';
-  const createElement = document.createElement('span');
-  createElement.innerText = task;
-  taskContainer.appendChild(createElement);
+function createTask(string) {
+  const taskLocal = document.querySelector('.my-tasks');
+  const createTask = document.createElement('span');
+  createTask.innerText = string;
+  taskLocal.appendChild(createTask);
   createTaskColor('green');
-  taskContainer.appendChild(document.createElement('br'));
 }
+
+createTask('Programar');
+
 
 function createTaskColor(color) {
   const taskContainer = document.querySelector('.my-tasks');
@@ -127,4 +125,13 @@ function taskSelect(){
 }
 taskSelect();
 
-//inverti a orde isso era pra ser feito em compromisso mas ja era nao vo mudar
+document.querySelector('#btn-add').addEventListener('click', createTaskList);
+
+function createTaskList() {
+  const taskContainer = document.querySelector('.task-list');
+  const task = document.querySelector('#task-input').value;
+  document.querySelector('#task-input').value = '';
+  const createElement = document.createElement('li');
+  createElement.innerText = task;
+  taskContainer.appendChild(createElement);
+}
