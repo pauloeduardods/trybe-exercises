@@ -92,3 +92,15 @@ function zoomOut(event) {
   event.target.style.fontSize = '20px';
   event.target.style.fontWeight = '200';
 }
+
+document.querySelector('#btn-add').addEventListener('click', createTask);
+
+function createTask() {
+  const taskContainer = document.querySelector('.my-tasks');
+  const task = document.querySelector('#task-input').value;
+  document.querySelector('#task-input').value = '';
+  const createElement = document.createElement('span');
+  createElement.innerText = task;
+  taskContainer.appendChild(createElement);
+  taskContainer.appendChild(document.createElement('br'))
+}
