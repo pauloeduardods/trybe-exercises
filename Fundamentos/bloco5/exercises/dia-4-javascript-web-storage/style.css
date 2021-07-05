@@ -4,13 +4,27 @@
 }
 
 body {
-  background-color: #f3f3f3;
-  color: #303030;
+  --text-color: #303030;
+  --bkg-color: #f3f3f3;
+  --header-text-color: #000;
+  --header-bkg-color: #969696;
+  --border-color: #505050;
+  --hover-color: #969696;
+  --hamburguer-color: #000;
+  background-color: var(--bkg-color);
+  color: var(--text-color);
 }
 
-.dark-mode {
-  background-color: #353535;
-  color: #bebebe;
+body.dark-mode {
+  --text-color: #fff; 
+  --bkg-color: #818181;
+  --header-text-color: #9b9b9b;
+  --header-bkg-color: #000;
+  --border-color: #414141;
+  --hover-color: #222;
+  --hamburguer-color: #fff;
+  background-color: var(--bkg-color);
+  color: var(--text-color);
 }
 
 .header {
@@ -22,9 +36,9 @@ body {
   align-items: center;
   justify-content:space-between;
   overflow: hidden;
-  border-bottom: 1px solid #a1a1a1;
+  border-bottom: 1px solid var(--border-color);
   z-index: 1000;
-  background-color: #f3f3f3;
+  background-color: var(--header-bkg-color);
 }
 
 .body {
@@ -45,7 +59,7 @@ body {
 .hamburguer-button span {
   display: block;
   margin: 2px 0;
-  background-color: black;
+  background-color: var(--hamburguer-color);
   width: 35px;
   height: 6px;
   border-radius: 5px;
@@ -61,13 +75,13 @@ body {
 
 .hamburguer-menu {
   position: fixed;
-  background-color: #f3f3f3;
+  background-color: var(--header-bkg-color);
   width: 300px;
   height: 600px;
   top: 60px;
   right: -301px;
   transition: right 0.5s;
-  border: 1px solid #a1a1a1;
+  border: 1px solid var(--border-color);
 }
 
 .hamburguer-button-checkbox:checked ~ .hamburguer-menu {
@@ -80,13 +94,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid #969696;
+  border-bottom: 1px solid var(--border-color);
   cursor: pointer;
 }
 
 .hamburguer-menu-content:hover {
   font-weight: bold;
-  background-color: #969696;
+  background-color: var(--hover-color);
 }
 
 .hamburguer-menu-content input {
@@ -117,12 +131,12 @@ details > summary {
   width: 300px;
   height:70px;
   right: 0;
-  background-color: white;
+  background-color: var(--bkg-color);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   border-style: solid;
   border-width: 1px 0;
-  border-color: black;
+  border-color: var(--border-color);
 }
