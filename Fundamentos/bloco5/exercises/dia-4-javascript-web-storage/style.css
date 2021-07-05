@@ -85,7 +85,8 @@ body {
 }
 
 .hamburguer-menu-content:hover {
-  
+  font-weight: bold;
+  background-color: #969696;
 }
 
 .hamburguer-menu-content input {
@@ -95,6 +96,19 @@ body {
 details > summary {
   cursor: pointer;
   list-style: none;
+}
+
+.details {
+  width: 100%;
+  height: 100%;
+}
+
+.details summary{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .select-menu {
