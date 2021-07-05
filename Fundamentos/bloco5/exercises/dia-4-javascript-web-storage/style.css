@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   background-color: #f3f3f3;
   color: #303030;
@@ -14,12 +15,15 @@ body {
 
 .header {
   position: fixed;
-  width: 100%;
+  width: 80%;
+  padding: 0px 10%;
   height: 60px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content:space-between;
+  overflow: hidden;
 }
+
 .body {
   top: 61px;
   position: relative;
@@ -27,14 +31,28 @@ body {
   left: 10%;
   width: 80%;
 }
+
 .footer {
   margin-top: 30px;
 }
-
-.hamburguer-button span{
+.hamburguer-button {
+  width: 35px;
+  height: 24px;
+}
+.hamburguer-button span {
   display: block;
   margin: 2px 0;
   background-color: black;
   width: 35px;
   height: 6px;
+  z-index: 1000;
+  border-radius: 5px;
+}
+
+.hamburguer-button input {
+  position: absolute;
+  z-index: 1001;
+  width: 35px;
+  height: 24px;
+  opacity: 0;
 }
