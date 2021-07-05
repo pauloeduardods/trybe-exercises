@@ -50,7 +50,7 @@ body {
   border-radius: 5px;
 }
 
-.hamburguer-button input {
+.hamburguer-button-checkbox {
   position: absolute;
   z-index: 1001;
   width: 35px;
@@ -69,17 +69,18 @@ body {
   border: 1px solid #a1a1a1;
 }
 
-.hamburguer-button input:checked ~ .hamburguer-menu {
+.hamburguer-button-checkbox:checked ~ .hamburguer-menu {
   right: 0;
 }
 .hamburguer-menu-content {
   width: 100%;
   height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .hamburguer-menu-content input {
-  width: 95%;
-  height: 45px;
+  width: 100px;
 }
-
 .main-content {
 }
