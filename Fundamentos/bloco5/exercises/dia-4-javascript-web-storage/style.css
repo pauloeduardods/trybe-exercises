@@ -54,7 +54,7 @@ body.dark-mode {
 }
 .hamburguer-button {
   width: 35px;
-  height: 24px;
+  height: 28px;
 }
 .hamburguer-button span {
   display: block;
@@ -69,7 +69,7 @@ body.dark-mode {
   position: absolute;
   z-index: 1001;
   width: 35px;
-  height: 24px;
+  height: 28px;
   opacity: 0;
 }
 
