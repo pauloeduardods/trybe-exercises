@@ -132,7 +132,7 @@ details > summary {
   width: 300px;
   height:70px;
   right: 0;
-  background-color: var(--bkg-color);
+  background-color: var(--header-bkg-color);
   display: flex;
   align-items: center;
   justify-content: center;
