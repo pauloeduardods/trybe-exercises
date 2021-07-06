@@ -65,3 +65,24 @@ function lineHeight() {
   })
 }
 lineHeight();
+
+function pageFont() {
+  const fonts = {
+    courier: "'Courier New', Courier, monospace",
+    franklin: "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
+    georgia: "Georgia, 'Times New Roman', Times, serif",
+    default: ''
+  };
+  const fontMenu = document.getElementById('font-menu');
+  function setFont() {
+    let fontSaved = localStorage.getItem('font');
+    let mainContent = document.querySelector('.body');
+    mainContent.style.setProperty('font-family', fontSaved);
+  }
+  setFont();
+  fontMenu.addEventListener('click', event => {
+    localStorage.setItem('font', fonts[event.target.id]);
+    setFont();
+  })
+}
+pageFont()
