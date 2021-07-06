@@ -1,13 +1,13 @@
 function darkMode() {
   let darkModeState = localStorage.getItem('dark-mode');
-  let page = document.body;
+  let root = document.documentElement;
   let darkModeText = document.getElementById('dark-mode-button');
   if (darkModeState === 'false' || !darkModeState) {
-    page.classList.remove('dark-mode');
+    root.className = 'light';
     darkModeText.innerText = 'Dark Mode: OFF';
   }
   else {
-    page.classList.add('dark-mode');
+    root.className = 'dark'
     darkModeText.innerText = 'Dark Mode: ON';
   }
 }
