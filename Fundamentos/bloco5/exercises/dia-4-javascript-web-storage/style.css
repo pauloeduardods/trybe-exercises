@@ -1,0 +1,143 @@
+.light {
+  --text-color: #303030;
+  --bkg-color: #f3f3f3;
+  --header-text-color: #000;
+  --header-bkg-color: #969696;
+  --border-color: #505050;
+  --hover-color: #969696;
+  --hamburguer-color: #000;
+}
+
+.dark {
+  --text-color: #fff; 
+  --bkg-color: #494949;
+  --header-text-color: #9b9b9b;
+  --header-bkg-color: #000;
+  --border-color: #414141;
+  --hover-color: #222;
+  --hamburguer-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bkg-color);
+  color: var(--text-color);
+}
+
+.header {
+  position: fixed;
+  width: 80%;
+  padding: 0px 10%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
+  z-index: 1000;
+  background-color: var(--header-bkg-color);
+}
+
+.body {
+  top: 61px;
+  position: relative;
+  display: inline-block;
+  left: 10%;
+  width: 80%;
+}
+
+.footer {
+  margin-top: 30px;
+}
+.hamburguer-button {
+  width: 35px;
+  height: 28px;
+}
+.hamburguer-button span {
+  display: block;
+  margin: 2px 0;
+  background-color: var(--hamburguer-color);
+  width: 35px;
+  height: 6px;
+  border-radius: 5px;
+}
+
+.hamburguer-button-checkbox {
+  position: absolute;
+  z-index: 1001;
+  width: 35px;
+  height: 28px;
+  opacity: 0;
+}
+
+.hamburguer-menu {
+  position: fixed;
+  background-color: var(--header-bkg-color);
+  width: 300px;
+  height: 600px;
+  top: 60px;
+  right: -301px;
+  transition: right 0.5s;
+  border: 1px solid var(--border-color);
+}
+
+.hamburguer-button-checkbox:checked ~ .hamburguer-menu {
+  right: 0;
+}
+
+.hamburguer-menu-content {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+}
+
+.hamburguer-menu-content:hover {
+  font-weight: bold;
+  background-color: var(--hover-color);
+}
+
+.hamburguer-menu-content input {
+  width: 100;
+}
+
+details > summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.details {
+  width: 100%;
+  height: 100%;
+}
+
+.details summary{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.select-menu {
+  position: absolute;
+  z-index: 2;
+  width: 300px;
+  height:70px;
+  right: 0;
+  background-color: var(--header-bkg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-style: solid;
+  border-width: 1px 0;
+  border-color: var(--border-color);
+}
