@@ -39,7 +39,7 @@ function states(array) {
 } 
 states(statesArray);
 
-function dateVerify() {
+function dateVerifier() {
   const dateElement = document.getElementById('start-date');
   let date = new Date(dateElement.value);
   if (date.getDate() > 31 || date.getDate() < 0
