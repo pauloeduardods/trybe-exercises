@@ -8,32 +8,43 @@
   <title>Document</title>
 </head>
 <body>
-  <fieldset>
-    <label for="name">Nome:</label>
-    <input id="name" name="name" type="text" placeholder="Digite seu nome" maxlength="40" required>
-    <br>
-    <label for="email">Email:</label>
-    <input type="email" name="email" id="email" placeholder="Digite seu Email" maxlength="50" required>
-    <br>
-    <label for="cpf">CPF:</label>
-    <input type="text" name="cpf" id="cpf" placeholder="Digite seu cpf" maxlength="11" required>
-    <br>
-    <label for="address">Endereço:</label>
-    <input type="text" name="address" id="address" maxlength="200" required>
-    <br>
-    <label for="city">Cidade:</label>
-    <input type="text" name="city" id="city" maxlength="28" required>
-    <br>
-    <label for="state">Estado:</label>
-    <select name="state" id="state"  required>
-      <option disabled selected value>Selecione um Estado</option>
-    </select>
-    <br>
-    Tipo:
-    <label for="house-radio"><input type="radio" name="type" value="house" id="house-radio" required>Casa</label>
-    <label for="apartament-radio"><input type="radio" name="type" value="apartament" id="apartament-radio">Apartamento</label>
-    <br>
-  </fieldset>
+  <header>
+    <h1>Formulario de curriculo</h1>
+  </header>
+  <main>
+    <h1>Dados pessoais</h1>
+    <fieldset>
+      <label for="name">Nome:</label>
+      <input id="name" name="name" type="text" placeholder="Digite seu nome" maxlength="40" required>
+      <br>
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" placeholder="Digite seu Email" maxlength="50" required>
+      <br>
+      <label for="cpf">CPF:</label>
+      <input type="text" name="cpf" id="cpf" placeholder="Digite seu cpf" maxlength="11" required>
+      <br>
+      <label for="address">Endereço:</label>
+      <input type="text" name="address" id="address" maxlength="200" required>
+      <br>
+      <label for="city">Cidade:</label>
+      <input type="text" name="city" id="city" maxlength="28" required>
+      <br>
+      <label for="state">Estado:</label>
+      <select name="state" id="state"  required>
+        <option disabled selected value>Selecione um Estado</option>
+      </select>
+      <br>
+      Tipo:
+      <label for="house-radio"><input type="radio" name="type" value="house" id="house-radio" required>Casa</label>
+      <label for="apartament-radio"><input type="radio" name="type" value="apartament" id="apartament-radio">Apartamento</label>
+      <br>
+    </fieldset>
+    <h1>Dados do seu ultimo emprego</h1>
+    <fieldset>
+  
+    </fieldset>
+  </main>
+  
   <script src="js/script.js"></script>
 </body>
 </html>
