@@ -18,7 +18,7 @@
       </header>
       <fieldset>
         <label for="name">Nome:</label>
-        <input id="name" name="name" type="text" placeholder="Digite seu nome" maxlength="40" required>
+        <input id="name" name="name" type="text" placeholder="Digite seu nome" maxlength="40" autofocus required>
         <br>
         <label for="email">Email:</label>
         <input type="email" name="email" id="email" placeholder="Digite seu Email" maxlength="50" required>
@@ -27,10 +27,10 @@
         <input type="text" name="cpf" id="cpf" placeholder="Digite seu cpf" maxlength="11" required>
         <br>
         <label for="address">Endereço:</label>
-        <input type="text" name="address" id="address" maxlength="200" required>
+        <input type="text" name="address" id="address" maxlength="200"     placeholder="Endereco" required>
         <br>
         <label for="city">Cidade:</label>
-        <input type="text" name="city" id="city" maxlength="28" required>
+        <input type="text" name="city" id="city" maxlength="28" placeholder="Cidade" required>
         <br>
         <label for="state">Estado:</label>
         <select name="state" id="state"  required>
@@ -50,14 +50,15 @@
         <textarea name="resume" id="resume" cols="30" rows="7" maxlength="1000" placeholder="Resumo do seu curriculo" required></textarea>
         <br>
         <label for="charge">Cargo:</label>
-        <input type="text" name="charge" id="charge" maxlength="40" required>
+        <input type="text" name="charge" id="charge" maxlength="40" placeholder="Cargo"  required>
         <br>
         <label for="charge-description">Descricao do cargo:</label>
-        <input type="text" name="charge-description" id="charge-description" maxlength="500" required>
+        <input type="text" name="charge-description" id="charge-description" maxlength="500" placeholder="Descricao do cargo" required>
         <br>
         <label for="start-date">Data de inicio:</label>
         <input type="date" name="start-date" id="start-date" required>
       </fieldset>
+      <input type="submit" name="submit-button" id="submit-button" value="Enviar">
     </form>
   </main>
   

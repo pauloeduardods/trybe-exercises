@@ -42,11 +42,25 @@ states(statesArray);
 function dateVerifier() {
   const dateElement = document.getElementById('start-date');
   let date = new Date(dateElement.value);
-  if (date.getDate() > 31 || date.getDate() < 0
-  || date.getMonth() > 12 || date.getMonth() < 0
-  || date.getFullYear < 0) {
-    alert('Voce colocou a data errada');
+  let maxDate = new Date();
+  let minDate = new Date();
+  minDate.setFullYear(minDate.getFullYear() - 100);
+  console.log(maxDate, minDate);
+  if (date > maxDate) {
+    alert('Voce vem do futuro???');
+    return false;
+  }else if (date < minDate) {
+    alert('Voce deveria estar aposentado, nao criando curriculo');
     return false;
   }
   return true;
 }
+
+function submitForm() {
+  const button = document.getElementById('submit-button');
+  button.addEventListener('click', (event) => {
+    event.preventDefault();
+    console.log(dateVerifier());
+  })
+}
+submitForm();
