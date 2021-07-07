@@ -77,7 +77,7 @@ function removeOldDiv(id) {
 }
 
 function createDiv(object) {
-  let body = document.body;
+  let body = document.getElementById('main');
   let newElement = document.createElement('div');
   newElement.id = "forms-completed";
   let objectKeys = Object.keys(object);
