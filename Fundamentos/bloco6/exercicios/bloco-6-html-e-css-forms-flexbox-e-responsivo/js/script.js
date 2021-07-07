@@ -60,7 +60,40 @@ function submitForm() {
   const button = document.getElementById('submit-button');
   button.addEventListener('click', (event) => {
     event.preventDefault();
-    console.log(dateVerifier());
+    let allData = Array.from(document.querySelectorAll('form input')).reduce((accumulator, input) =>
+      ({...accumulator, [input.name] : input.value}),{}); //accumulator comeca com um objeto vazio, e conforme vai indo ele acidiona um novo elemento ao objeto e salva no accumulator, ate ter o objeto com todos os dados do array
+    let textArea = document.querySelector('form textarea');
+    let select = document.querySelector('form select');
+    allData[textArea.name] = textArea.value;
+    allData[select.name] = select.value;
+    createDiv(allData);
   })
 }
 submitForm();
+
+function removeOldDiv(id) {
+  let oldElement = document.getElementById(id);
+  if (oldElement) oldElement.remove();
+}
+
+function createDiv(object) {
+  let body = document.body;
+  let newElement = document.createElement('div');
+  newElement.id = "forms-completed";
+  let objectKeys = Object.keys(object);
+  for(let key of objectKeys) {
+    let newDiv = document.createElement('div');
+    newDiv.className = "forms-completed-iten"
+    let textKey = document.createElement('p');
+    textKey.className = 'forms-key';
+    textKey.innerText = key;
+    newDiv.appendChild(textKey);
+    let textValue = document.createElement('p');
+    textValue.className = 'forms-value';
+    textValue.innerText = object[key];
+    newDiv.appendChild(textValue);
+    newElement.appendChild(newDiv);
+  }
+  removeOldDiv('forms-completed');
+  body.appendChild(newElement);
+}

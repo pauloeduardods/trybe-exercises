@@ -12,34 +12,34 @@
     <h1>Formulario de curriculo</h1>
   </header>
   <main>
-    <form>
+    <form id="form">
       <header>
         <h1>Dados pessoais</h1>
       </header>
       <fieldset>
         <label for="name">Nome:</label>
-        <input id="name" name="name" type="text" placeholder="Digite seu nome" maxlength="40" autofocus required>
+        <input id="name" name="Nome" type="text" placeholder="Digite seu nome" maxlength="40" autofocus required>
         <br>
         <label for="email">Email:</label>
-        <input type="email" name="email" id="email" placeholder="Digite seu Email" maxlength="50" required>
+        <input type="email" name="Email" id="email" placeholder="Digite seu Email" maxlength="50" required>
         <br>
         <label for="cpf">CPF:</label>
-        <input type="text" name="cpf" id="cpf" placeholder="Digite seu cpf" maxlength="11" required>
+        <input type="text" name="CPF" id="cpf" placeholder="Digite seu cpf" maxlength="11" required>
         <br>
         <label for="address">Endereço:</label>
-        <input type="text" name="address" id="address" maxlength="200"     placeholder="Endereco" required>
+        <input type="text" name="Endereco" id="address" maxlength="200"     placeholder="Endereco" required>
         <br>
         <label for="city">Cidade:</label>
-        <input type="text" name="city" id="city" maxlength="28" placeholder="Cidade" required>
+        <input type="text" name="Cidade" id="city" maxlength="28" placeholder="Cidade" required>
         <br>
         <label for="state">Estado:</label>
-        <select name="state" id="state"  required>
+        <select name="Estado" id="state"  required>
           <option disabled selected value>Selecione um Estado</option>
         </select>
         <br>
         Tipo:
-        <label for="house-radio"><input type="radio" name="type" value="house" id="house-radio" required>Casa</label>
-        <label for="apartament-radio"><input type="radio" name="type" value="apartament" id="apartament-radio">Apartamento</label>
+        <label><input type="radio" name="Tipo" value="house" id="type-ho" required>Casa</label>
+        <label><input type="radio" name="Tipo" value="apartament" id="type-ap">Apartamento</label>
         <br>
       </fieldset>
       <header>
@@ -47,16 +47,16 @@
       </header>
       <fieldset>
         <label for="resume">Resumo do curriculo:</label>
-        <textarea name="resume" id="resume" cols="30" rows="7" maxlength="1000" placeholder="Resumo do seu curriculo" required></textarea>
+        <textarea name="Resumo" id="resume" cols="30" rows="7" maxlength="1000" placeholder="Resumo do seu curriculo" required></textarea>
         <br>
         <label for="charge">Cargo:</label>
-        <input type="text" name="charge" id="charge" maxlength="40" placeholder="Cargo"  required>
+        <input type="text" name="Cargo" id="charge" maxlength="40" placeholder="Cargo"  required>
         <br>
         <label for="charge-description">Descricao do cargo:</label>
-        <input type="text" name="charge-description" id="charge-description" maxlength="500" placeholder="Descricao do cargo" required>
+        <input type="text" name="Descricao" id="charge-description" maxlength="500" placeholder="Descricao do cargo" required>
         <br>
         <label for="start-date">Data de inicio:</label>
-        <input type="date" name="start-date" id="start-date" required>
+        <input type="date" name="Data de inicio" id="start-date" required>
       </fieldset>
       <input type="submit" name="submit-button" id="submit-button" value="Enviar">
     </form>
