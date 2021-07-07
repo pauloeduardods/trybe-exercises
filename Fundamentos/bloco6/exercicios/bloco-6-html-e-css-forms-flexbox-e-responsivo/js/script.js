@@ -37,4 +37,16 @@ function states(array) {
     statesDocument.appendChild(newOption);
   }
 } 
-states(statesArray)
+states(statesArray);
+
+function dateVerify() {
+  const dateElement = document.getElementById('start-date');
+  let date = new Date(dateElement.value);
+  if (date.getDate() > 31 || date.getDate() < 0
+  || date.getMonth() > 12 || date.getMonth() < 0
+  || date.getFullYear < 0) {
+    alert('Voce colocou a data errada');
+    return false;
+  }
+  return true;
+}
