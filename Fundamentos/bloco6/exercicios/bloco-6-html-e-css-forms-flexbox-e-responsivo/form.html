@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <header class="header">
+    <h1>Formulario de curriculo</h1>
+  </header>
+  <main id="main" class="main-content">
+    <form id="form">
+      <header class="header-form">
+        <h1>Dados pessoais</h1>
+      </header>
+      <fieldset>
+        <div class="form-element">
+          <label class="label" for="name">Nome:</label>
+          <input class="input" id="name" name="Nome" type="text" placeholder="Digite seu nome" maxlength="40" autofocus required>
+        </div>
+        <div class="form-element">
+          <label class="label" for="email">Email:</label>
+          <input class="input" type="email" name="Email" id="email" placeholder="Digite seu Email" maxlength="50" required>
+        </div>
+        <div class="form-element">
+          <label class="label" for="cpf">CPF:</label>
+          <input class="input" type="text" name="CPF" id="cpf" placeholder="Digite seu cpf" maxlength="11" required>
+        </div>
+        <div class="form-element">
+          <label class="label" for="address">Endereço:</label>
+          <input class="input" type="text" name="Endereco" id="address" maxlength="200"     placeholder="Endereco" required>
+        </div>
+        <div class="form-element">
+          <label class="label" for="city">Cidade:</label>
+          <input class="input" type="text" name="Cidade" id="city" maxlength="28" placeholder="Cidade" required>
+        </div>
+        <div class="form-element">
+          <label class="label" for="state">Estado:</label>
+          <select class="input" name="Estado" id="state"  required>
+            <option disabled selected value>Selecione um Estado</option>
+          </select>
+        </div>
+        <div class="form-element">
+            Tipo:
+          <div>
+            <label class="input-radio"><input type="radio" name="Tipo" value="Casa" id="type-ho" required checked>Casa</label>
+            <label class="input-radio"><input type="radio" name="Tipo" value="Apartamento" id="type-ap">Apartamento</label>
+          </div>
+        </div>
+      </fieldset>
+      <header class="header-form">
+        <h1>Dados do seu ultimo emprego</h1>
+      </header>
+      <fieldset>
+        <div class="form-element textarea">
+          <label class="label" for="resume">Resumo do curriculo:</label>
+          <textarea class="input1" name="Resumo" id="resume" cols="30" rows="7" maxlength="1000" placeholder="Resumo do seu curriculo" required></textarea>
+        </div>
+        <div class="form-element">
+          <label class="label" for="charge">Cargo:</label>
+          <input class="input1" type="text" name="Cargo" id="charge" maxlength="40" placeholder="Cargo"  required>
+        </div>
+        <div class="form-element">
+          <label class="label" for="charge-description">Descricao do cargo:</label>
+          <input class="input1" type="text" name="Descricao" id="charge-description" maxlength="500" placeholder="Descricao do cargo" required>
+        </div>
+        <div class="form-element">
+          <label class="label" for="start-date">Data de inicio:</label>
+          <input class="input1" type="date" name="Data de inicio" id="start-date" required>
+        </div>
+      </fieldset>
+      <div class="buttons">
+        <input class="button submit-button" type="submit" name="submit-button" id="submit-button" value="Enviar">
+        <input class="button reset-button" type="reset" value="Limpar">
+      </div>
+    </form>
+    <div id="forms-completed" class="forms-completed"></div>
+  </main> 
+  <script src="js/script.js"></script>
+</body>
+</html>
