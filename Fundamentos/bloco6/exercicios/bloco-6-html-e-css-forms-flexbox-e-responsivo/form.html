@@ -44,36 +44,40 @@
           </select>
         </div>
         <div class="form-element">
-          <div class="label">
             Tipo:
+          <div>
+            <label class="input-radio"><input type="radio" name="Tipo" value="Casa" id="type-ho" required checked>Casa</label>
+            <label class="input-radio"><input type="radio" name="Tipo" value="Apartamento" id="type-ap">Apartamento</label>
           </div>
-          <label><input class="input" type="radio" name="Tipo" value="house" id="type-ho" required>Casa</label>
-          <label><input class="input" type="radio" name="Tipo" value="apartament" id="type-ap">Apartamento</label>
         </div>
       </fieldset>
       <header class="header-form">
         <h1>Dados do seu ultimo emprego</h1>
       </header>
       <fieldset>
-        <div class="form-element">
+        <div class="form-element textarea">
           <label class="label" for="resume">Resumo do curriculo:</label>
-          <textarea class="input" name="Resumo" id="resume" cols="30" rows="7" maxlength="1000" placeholder="Resumo do seu curriculo" required></textarea>
+          <textarea class="input1" name="Resumo" id="resume" cols="30" rows="7" maxlength="1000" placeholder="Resumo do seu curriculo" required></textarea>
         </div>
         <div class="form-element">
           <label class="label" for="charge">Cargo:</label>
-          <input class="input" type="text" name="Cargo" id="charge" maxlength="40" placeholder="Cargo"  required>
+          <input class="input1" type="text" name="Cargo" id="charge" maxlength="40" placeholder="Cargo"  required>
         </div>
         <div class="form-element">
           <label class="label" for="charge-description">Descricao do cargo:</label>
-          <input class="input" type="text" name="Descricao" id="charge-description" maxlength="500" placeholder="Descricao do cargo" required>
+          <input class="input1" type="text" name="Descricao" id="charge-description" maxlength="500" placeholder="Descricao do cargo" required>
         </div>
         <div class="form-element">
           <label class="label" for="start-date">Data de inicio:</label>
-          <input class="input" type="date" name="Data de inicio" id="start-date" required>
+          <input class="input1" type="date" name="Data de inicio" id="start-date" required>
         </div>
       </fieldset>
-      <input type="submit" name="submit-button" id="submit-button" value="Enviar">
+      <div class="buttons">
+        <input class="button submit-button" type="submit" name="submit-button" id="submit-button" value="Enviar">
+        <input class="button reset-button" type="reset" value="Limpar">
+      </div>
     </form>
+    <div id="forms-completed" class="forms-completed"></div>
   </main> 
   <script src="js/script.js"></script>
 </body>

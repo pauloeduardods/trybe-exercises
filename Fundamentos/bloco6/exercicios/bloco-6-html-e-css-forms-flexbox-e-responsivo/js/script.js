@@ -41,9 +41,9 @@ states(statesArray);
 
 function dateVerifier() {
   const dateElement = document.getElementById('start-date');
-  let date = new Date(dateElement.value);
-  let maxDate = new Date();
-  let minDate = new Date();
+  const date = new Date(dateElement.value);
+  const maxDate = new Date();
+  const minDate = new Date();
   minDate.setFullYear(minDate.getFullYear() - 100);
   console.log(maxDate, minDate);
   if (date > maxDate) {
@@ -56,44 +56,57 @@ function dateVerifier() {
   return true;
 }
 
+function getChecked() {
+  const element = document.getElementsByName('Tipo');
+  for (let i = 0; i < element.length; i += 1) {
+    if (element[i].checked === true) {
+      return {name: 'Tipo', value: element[i].value}
+    }
+  }
+  return {name: element[0].name, value: element[0].value}
+}
+
+function getData() {
+  let allData = Array.from(document.querySelectorAll('form fieldset input')).reduce((accumulator, input) =>
+    ({...accumulator, [input.name] : input.value}),{}); //accumulator comeca com um objeto vazio, e conforme vai indo ele acidiona um novo elemento ao objeto e salva no accumulator, ate ter o objeto com todos os dados do array
+  const radio = getChecked();
+  const textArea = document.querySelector('form fieldset textarea');
+  const select = document.querySelector('form fieldset select');
+  allData[textArea.name] = textArea.value;
+  allData[select.name] = select.value;
+  allData[radio.name] = radio.value;
+  return allData;
+}
+
 function submitForm() {
   const button = document.getElementById('submit-button');
   button.addEventListener('click', (event) => {
     event.preventDefault();
-    let allData = Array.from(document.querySelectorAll('form input')).reduce((accumulator, input) =>
-      ({...accumulator, [input.name] : input.value}),{}); //accumulator comeca com um objeto vazio, e conforme vai indo ele acidiona um novo elemento ao objeto e salva no accumulator, ate ter o objeto com todos os dados do array
-    let textArea = document.querySelector('form textarea');
-    let select = document.querySelector('form select');
-    allData[textArea.name] = textArea.value;
-    allData[select.name] = select.value;
-    createDiv(allData);
+    dateVerifier();
+    const allData = getData();
+    createFormsResult(allData);
   })
 }
 submitForm();
 
-function removeOldDiv(id) {
-  let oldElement = document.getElementById(id);
-  if (oldElement) oldElement.remove();
+function removeOldForms(id) {
+  const oldElement = document.getElementById(id);
+  oldElement.innerHTML = '';
 }
 
-function createDiv(object) {
-  let body = document.getElementById('main');
-  let newElement = document.createElement('div');
-  newElement.id = "forms-completed";
-  let objectKeys = Object.keys(object);
-  for(let key of objectKeys) {
-    let newDiv = document.createElement('div');
-    newDiv.className = "forms-completed-iten"
-    let textKey = document.createElement('p');
-    textKey.className = 'forms-key';
-    textKey.innerText = key;
-    newDiv.appendChild(textKey);
-    let textValue = document.createElement('p');
-    textValue.className = 'forms-value';
-    textValue.innerText = object[key];
-    newDiv.appendChild(textValue);
-    newElement.appendChild(newDiv);
+function createFormsResult(object) {
+  const formsCompleted = document.getElementById('forms-completed');
+  const objectKeys = Object.keys(object);
+  removeOldForms('forms-completed');
+  for(const key of objectKeys) {
+    const newElement = document.createElement('div');
+    const textKey = document.createElement('span');
+    const textValue = document.createElement('span');
+    textKey.innerText = `${key}:`;
+    textValue.innerText = object[key]
+    newElement.appendChild(textKey);
+    newElement.appendChild(textValue);
+    formsCompleted.appendChild(newElement);
   }
-  removeOldDiv('forms-completed');
-  body.appendChild(newElement);
+  
 }
