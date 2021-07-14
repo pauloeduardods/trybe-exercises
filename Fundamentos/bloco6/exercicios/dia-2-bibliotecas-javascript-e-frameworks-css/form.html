@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <header class="header">
+    <h1>Formulario de curriculo</h1>
+  </header>
+  <main id="main" class="main-content">
+    <form class="col s7">
+      <header class="header-form">
+        <h1>Dados pessoais</h1>
+      </header>
+      <fieldset>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix"><span class="material-icons-outlined">
+              account_circle
+              </span></i>
+            <input id="name" name="Nome" type="text" placeholder="Digite seu nome" maxlength="40" autofocus required>
+            <label for="name">Primeiro nome</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix"><span class="material-icons-outlined">email</span></i>
+            <input class="validate" type="email" name="Email" id="email" placeholder="Digite seu Email" maxlength="50" required>
+            <label for="email">Email</label>
+            <span class="helper-text" data-error="Digite um email valido" data-success="">Insira seu email</span>
+          </div>      
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix"><span class="material-icons-outlined">perm_identity</span></i>
+            <input type="text" name="CPF" id="cpf" placeholder="Digite seu CPF" maxlength="11" required>
+            <label for="cpf">CPF</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix"><span class="material-icons-outlined">home</span></i>
+            <input type="text" name="Endereco" id="address" maxlength="200"     placeholder="Endereco" required>
+            <label for="address">Endereço</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix"><span class="material-icons-outlined">apartment</span></i>
+            <input type="text" name="Cidade" id="city" maxlength="28" placeholder="Cidade" required>
+            <label for="city">Cidade</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix"><span class="material-icons-outlined">location_city</span></i>
+            <select name="Estado" id="state"  required>
+              <option disabled selected>Selecione um Estado</option>
+            </select>
+            <label for="state">Estado</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix"><span class="material-icons-outlined">maps_home_work</span></i>
+            <label class="inline">
+              <input type="radio" name="Tipo" value="Casa" id="type-ho" required checked>
+              <span>Casa</span>
+            </label>
+            <label class="inline">
+              <input type="radio" name="Tipo" value="Apartamento" id="type-ap">
+              <span>Apartamento</span>
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <header class="header-form">
+        <h1>Dados do seu ultimo emprego</h1>
+      </header>
+      <fieldset>
+        <div class="form-element textarea">
+          <label class="label" for="resume">Resumo do curriculo:</label>
+          <textarea class="input1" name="Resumo" id="resume" cols="30" rows="7" maxlength="1000" placeholder="Resumo do seu curriculo" required></textarea>
+        </div>
+        <div class="form-element">
+          <label class="label" for="charge">Cargo:</label>
+          <input class="input1" type="text" name="Cargo" id="charge" maxlength="40" placeholder="Cargo"  required>
+        </div>
+        <div class="form-element">
+          <label class="label" for="charge-description">Descricao do cargo:</label>
+          <input class="input1" type="text" name="Descricao" id="charge-description" maxlength="500" placeholder="Descricao do cargo" required>
+        </div>
+        <div class="form-element">
+          <label class="label" for="start-date">Data de inicio:</label>
+          <input class="input1" type="date" name="Data de inicio" id="start-date" required>
+        </div>
+      </fieldset>
+      <div class="buttons">
+        <input class="button submit-button" type="submit" name="submit-button" id="submit-button" value="Enviar">
+        <input class="button reset-button" type="reset" value="Limpar">
+      </div>
+    </form>
+    <div id="forms-completed" class="forms-completed"></div>
+  </main> 
+  <script src="js/script.js"></script>
+</body>
+</html>
