@@ -45,7 +45,6 @@ function dateVerifier() {
   const maxDate = new Date();
   const minDate = new Date();
   minDate.setFullYear(minDate.getFullYear() - 100);
-  console.log(maxDate, minDate);
   if (date > maxDate) {
     alert('Voce vem do futuro???');
     return false;
