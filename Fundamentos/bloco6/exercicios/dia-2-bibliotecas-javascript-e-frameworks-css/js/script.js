@@ -36,6 +36,17 @@ document.addEventListener('DOMContentLoaded', function() {
 const textArea = document.getElementById('resume')
 M.textareaAutoResize(textArea);
 
+var picker = new Pikaday({
+  field: document.getElementById('start-date'),
+  format: 'DD MM YYYY',
+  yearRange: [moment().subtract(80, 'year').year(), moment().year()],
+  onSelect: function() {
+      console.log(this.getMoment().format('Do MMMM YYYY'));
+  },
+  minDate: moment().subtract(80, 'year').toDate(),
+  maxDate: moment().toDate()
+});
+
 function states(array) {
   const statesDocument = document.getElementById('state');
   for(state of array) {

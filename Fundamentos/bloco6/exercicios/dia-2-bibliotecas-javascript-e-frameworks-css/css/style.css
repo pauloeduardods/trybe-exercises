@@ -9,11 +9,20 @@
 }
 
 .flex-center {
-  margin-top: 0;
+  margin: 0;
   display: flex;
   align-items: center;
 }
 
 .no-top {
   top: .7rem !important;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: center;
+}
+
+.no-margin-left {
+  margin-left: 0 !important;
 }
