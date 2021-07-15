@@ -36,11 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
 const textArea = document.getElementById('resume')
 M.textareaAutoResize(textArea);
 
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.start-date');
-  var instances = M.Datepicker.init(elems);
-});
-
 function states(array) {
   const statesDocument = document.getElementById('state');
   for(state of array) {
@@ -122,3 +117,4 @@ function createFormsResult(object) {
   }
   
 }
+//53.9 34.2 11.9
