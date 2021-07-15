@@ -33,6 +33,14 @@ document.addEventListener('DOMContentLoaded', function() {
   var instances = M.FormSelect.init(elems);
 });
 
+const textArea = document.getElementById('resume')
+M.textareaAutoResize(textArea);
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.start-date');
+  var instances = M.Datepicker.init(elems);
+});
+
 function states(array) {
   const statesDocument = document.getElementById('state');
   for(state of array) {
@@ -50,7 +58,6 @@ function dateVerifier() {
   const maxDate = new Date();
   const minDate = new Date();
   minDate.setFullYear(minDate.getFullYear() - 100);
-  console.log(maxDate, minDate);
   if (date > maxDate) {
     alert('Voce vem do futuro???');
     return false;
