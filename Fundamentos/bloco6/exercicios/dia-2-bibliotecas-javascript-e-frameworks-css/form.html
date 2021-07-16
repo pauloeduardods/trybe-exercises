@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="node_modules/moment/moment.js"></script>
+  <script src="./node_modules/just-validate/dist/js/just-validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
   <title>Document</title>
 </head>
 <body>
@@ -16,102 +20,124 @@
     <h1>Formulario de curriculo</h1>
   </header>
   <main id="main" class="container">
-    <form class="col s7">
-      <header class="header-form">
+    <form class="col s12 form" novalidate="novalidate">
+      <header class="center">
         <h1>Dados pessoais</h1>
       </header>
       <fieldset>
         <div class="row">
-          <div class="input-field col s7">
-            <i class="material-icons prefix"><span class="material-icons-outlined">
-              account_circle
-              </span></i>
-            <input id="name" name="Nome" type="text" placeholder="Digite seu nome" maxlength="40" autofocus required>
-            <label for="name">Primeiro nome</label>
+          <div class="flexbox">
+            <div class="input-field col s7 no-margin-left">
+              <i class="material-icons prefix"><span class="material-icons-outlined">
+                account_circle
+                </span></i>
+              <input id="name" name="Nome" type="text" placeholder="Digite seu nome" maxlength="40" autofocus data-validate-field="name" autocomplete="off">
+              <label for="name">Primeiro nome</label>
+            </div>
           </div>
         </div>
         <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix"><span class="material-icons-outlined">email</span></i>
-            <input class="validate" type="email" name="Email" id="email" placeholder="Digite seu Email" maxlength="50" required>
-            <label for="email">Email</label>
-            <span class="helper-text" data-error="Digite um email valido" data-success="">Insira seu email</span>
-          </div>      
+          <div class="flexbox">
+            <div class="input-field col s7 no-margin-left">
+              <i class="material-icons prefix"><span class="material-icons-outlined">email</span></i>
+              <input class="validate" type="email" name="Email" id="email" placeholder="Digite seu Email" maxlength="50" data-validate-field="email">
+              <label for="email">Email</label>
+              <span class="helper-text" data-error="Digite um email valido">Insira seu email</span>
+            </div>    
+          </div>     
         </div>
         <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix"><span class="material-icons-outlined">perm_identity</span></i>
-            <input type="text" name="CPF" id="cpf" placeholder="Digite seu CPF" maxlength="11" required>
-            <label for="cpf">CPF</label>
+          <div class="flexbox">
+            <div class="input-field col s7 no-margin-left">
+              <i class="material-icons prefix"><span class="material-icons-outlined">perm_identity</span></i>
+              <input type="text" name="CPF" id="cpf" placeholder="Digite seu CPF" maxlength="11" data-validate-field="cpf">
+              <label for="cpf">CPF</label>
+            </div>
           </div>
         </div>
         <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix"><span class="material-icons-outlined">home</span></i>
-            <input type="text" name="Endereco" id="address" maxlength="200"     placeholder="Endereco" required>
-            <label for="address">Endereço</label>
+          <div class="flexbox">
+            <div class="input-field col s7 no-margin-left">
+              <i class="material-icons prefix"><span class="material-icons-outlined">home</span></i>
+              <input type="text" name="Endereco" id="address" maxlength="200" placeholder="Endereco" data-validate-field="address">
+              <label for="address">Endereço</label>
+            </div>
           </div>
         </div>
         <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix"><span class="material-icons-outlined">apartment</span></i>
-            <input type="text" name="Cidade" id="city" maxlength="28" placeholder="Cidade" required>
-            <label for="city">Cidade</label>
+          <div class="flexbox">
+            <div class="input-field col s7 no-margin-left">
+              <i class="material-icons prefix"><span class="material-icons-outlined">apartment</span></i>
+              <input type="text" name="Cidade" id="city" maxlength="28" placeholder="Cidade" data-validate-field="city">
+              <label for="city">Cidade</label>
+            </div>
           </div>
         </div>
         <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix"><span class="material-icons-outlined">location_city</span></i>
-            <select name="Estado" id="state"  required>
-              <option disabled selected>Selecione um Estado</option>
-            </select>
-            <label for="state">Estado</label>
+          <div class="flexbox">
+            <div class="input-field col s7 no-margin-left">
+              <i class="material-icons prefix"><span class="material-icons-outlined">location_city</span></i>
+              <select name="Estado" id="state" data-validate-field="state">
+                <option disabled selected>Selecione um Estado</option>
+              </select>
+              <label for="state">Estado</label>
+            </div>
           </div>
         </div>
         <div class="row">
-          <div class="input-field col s7 flex-center">
-            <i class="material-icons prefix no-top"><span class="material-icons-outlined">maps_home_work</span></i>
-            <label class="radio-block">
-              <input type="radio" name="Tipo" value="Casa" id="type-ho" required checked>
-              <span>Casa</span>
-            </label>
-            <label class="radio-block">
-              <input type="radio" name="Tipo" value="Apartamento" id="type-ap">
-              <span>Apartamento</span>
-            </label>
-          </div>
+          <div class="flexbox">
+            <div class="input-field col s7 flex-center no-margin-left">
+              <i class="material-icons prefix no-top"><span class="material-icons-outlined">maps_home_work</span></i>
+              <label class="radio-block">
+                <input type="radio" name="Tipo" value="Casa" id="type-ho" required checked>
+                <span>Casa</span>
+              </label>
+              <label class="radio-block">
+                <input type="radio" name="Tipo" value="Apartamento" id="type-ap">
+                <span>Apartamento</span>
+              </label>
+            </div>
+          </div>  
         </div>
       </fieldset>
-      <header class="header-form">
+      <header class="center">
         <h1>Dados do seu ultimo emprego</h1>
       </header>
       <fieldset>
         <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix"><span class="material-icons-outlined">article</span></i>
-            <textarea class="materialize-textarea" name="Resumo" id="resume" cols="30" rows="7" maxlength="1000" required></textarea>
-            <label for="resume">Resumo do curriculo</label>
+          <div class="flexbox">
+            <div class="input-field col s7 no-margin-left">
+              <i class="material-icons prefix"><span class="material-icons-outlined">article</span></i>
+              <textarea class="materialize-textarea" name="Resumo" id="resume" cols="30" rows="7" maxlength="1000" required></textarea>
+              <label for="resume">Resumo do curriculo</label>
+            </div>
           </div>
         </div>
         <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix"><span class="material-icons-outlined">content_paste</span></i>
-            <input type="text" name="Cargo" id="charge" maxlength="40" placeholder="Cargo"  required>
-            <label>Cargo</label>
+          <div class="flexbox">
+            <div class="input-field col s7 no-margin-left">
+              <i class="material-icons prefix"><span class="material-icons-outlined">content_paste</span></i>
+              <input type="text" name="Cargo" id="charge" maxlength="40" placeholder="Cargo"  required>
+              <label>Cargo</label>
+            </div>
+          </div>  
+        </div>
+        <div class="row">
+          <div class="flexbox">
+            <div class="input-field col s7 no-margin-left">
+              <i class="material-icons prefix"><span class="material-icons-outlined">description</span></i>
+              <input type="text" name="Descricao" id="charge-description" maxlength="500" placeholder="Descricao do cargo" required>
+              <label>Descricao do cargo</label>
+            </div>
           </div>
         </div>
         <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix"><span class="material-icons-outlined">description</span></i>
-            <input type="text" name="Descricao" id="charge-description" maxlength="500" placeholder="Descricao do cargo" required>
-            <label>Descricao do cargo</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s3">
-            <i class="material-icons prefix"><span class="material-icons-outlined">calendar_today</span></i>
-            <input class="datepicker" type="date" name="Data de inicio" id="start-date" required>
-            <label>Data de inicio</label>
+          <div class="flexbox">
+            <div class="input-field col s7 no-margin-left">
+              <i class="material-icons prefix"><span class="material-icons-outlined">calendar_today</span></i>
+              <input type="text" name="Data de inicio" id="start-date" placeholder="Selecione uma data" required>
+              <label>Data de inicio</label>
+            </div>
           </div>
         </div>
       </fieldset>
@@ -122,11 +148,10 @@
         <div class="col s6 center-align">
           <button class="btn-large red waves-effect waves-light" type="reset">Limpar<i class="material-icons right"><span class="material-icons-outlined">cleaning_services</span></i></button>
         </div>
-        
       </div>
     </form>
     <div id="forms-completed" class="forms-completed"></div>
-  </main> 
+  </main>
   <script src="js/script.js"></script>
 </body>
 </html>

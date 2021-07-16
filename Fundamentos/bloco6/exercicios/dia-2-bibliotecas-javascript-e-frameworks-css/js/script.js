@@ -36,6 +36,47 @@ document.addEventListener('DOMContentLoaded', function() {
 const textArea = document.getElementById('resume')
 M.textareaAutoResize(textArea);
 
+var picker = new Pikaday({
+  field: document.getElementById('start-date'),
+  format: 'DD MM YYYY',
+  yearRange: [moment().subtract(80, 'year').year(), moment().year()],
+  onSelect: function() {
+      console.log(this.getMoment().format('Do MMMM YYYY'));
+  },
+  minDate: moment().subtract(80, 'year').toDate(),
+  maxDate: moment().toDate()
+});
+
+new window.JustValidate('.form', {
+  rules: {
+    email: {
+      required: true,
+      email: true
+    },
+    name: {
+      required: true
+    },
+    cpf: {
+      required: true
+    },
+    address: {
+      required: true
+    },
+    city: {
+      required: true
+    },
+    state: {
+      required: true
+    }
+  },
+  submitHandler: function(form, values, ajax) {
+    console.log(values);
+  },
+  invalidFormCallback: function (errors) {
+    console.log(errors);
+}
+});
+
 function states(array) {
   const statesDocument = document.getElementById('state');
   for(state of array) {
@@ -89,12 +130,12 @@ function submitForm() {
   const button = document.getElementById('submit-button');
   button.addEventListener('click', (event) => {
     event.preventDefault();
-    dateVerifier();
+    //dateVerifier();
     const allData = getData();
     createFormsResult(allData);
   })
 }
-submitForm();
+//submitForm();
 
 function removeOldForms(id) {
   const oldElement = document.getElementById(id);
@@ -115,6 +156,5 @@ function createFormsResult(object) {
     newElement.appendChild(textValue);
     formsCompleted.appendChild(newElement);
   }
-  
 }
 //53.9 34.2 11.9
