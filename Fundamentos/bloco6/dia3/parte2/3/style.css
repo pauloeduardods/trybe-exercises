@@ -1,0 +1,20 @@
+.box {
+  color: #9069EF;
+  background-color: rgb(243, 243, 243);
+  border: 2px solid #232525;
+  font-size: 50px;
+  min-height: 60px;
+  margin: 10px 5px;
+  text-align: center;
+  width: 100px;
+}
+
+.box-container {
+  /* ADICIONE AQUI SEUS TESTES */
+  background-color: #0fa36b;
+  display: flex;
+  flex-wrap: wrap;
+  height: 600px;
+  align-content: flex-start;  /* Qaundo vc usa o wrap voce usa o aling-content!!!! */
+  /* align-content: flex-end; */
+}
