@@ -6,22 +6,22 @@
 
 </div>
 
-#### Bloco 1: Introdução - Unix & Shell ✅️
+#### Bloco 1: Introdução - Unix & Shell ✔️
 
 #### Bloco 2: Git & GitHub ✅️
 
 #### Bloco 03: Introdução à HTML & CSS ✅️
--[x] Projeto Lessons Learned
+- [x] Projeto Lessons Learned
 
 #### Bloco 4: Bloco 04: Introdução à JavaScript & Lógica de Programação ✅️
--[x] Projeto Playground Functions
+- [x] Projeto Playground Functions
 
 #### Bloco 05: JavaScript: DOM, Eventos e Web Storage ✅️
--[x] Projeto Pixels Art
--[x] Projeto Todo List
--[x] Projeto Meme Generator
--[x] Projeto Color Guess
--[x] Projeto Mistery Letter
+- [x] Projeto Pixels Art
+- [x] Projeto Todo List
+- [x] Projeto Meme Generator
+- [x] Projeto Color Guess
+- [x] Projeto Mistery Letter
 
 #### Bloco 06: HTML e CSS: Forms, Flexbox e Responsivo ❌️
--[] Projeto Trybewarts
+- [] Projeto Trybewarts
