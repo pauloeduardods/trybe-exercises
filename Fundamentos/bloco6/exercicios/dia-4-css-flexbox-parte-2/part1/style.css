@@ -18,10 +18,12 @@ body {
   display: flex;
   justify-content: center;
   order: -1;
+  flex-basis: 268px;
 }
 
 .menu-container {
   display: flex;
+  flex-basis: 500px;
 }
 
 .menu-container ul {
