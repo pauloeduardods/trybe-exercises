@@ -1,4 +1,4 @@
-Esse repositório armazena meus exercícios e estudos durante o curso de desenvolvimento web na [**Trybe**](https://www.betrybe.com/)  🚀️🚀️🚀️
+#### Esse repositório armazena meus exercícios e estudos durante o curso de desenvolvimento web na [**Trybe**](https://www.betrybe.com/)  🚀️🚀️🚀️
 
 <div align="center">
 
@@ -6,7 +6,7 @@ Esse repositório armazena meus exercícios e estudos durante o curso de desenvo
 
 </div>
 
-#### Bloco 1: Introdução - Unix & Shell heavy_check_mark
+#### Bloco 1: Introdução - Unix & Shell &#9745;
 
 #### Bloco 2: Git & GitHub heavy_check_mark
 
