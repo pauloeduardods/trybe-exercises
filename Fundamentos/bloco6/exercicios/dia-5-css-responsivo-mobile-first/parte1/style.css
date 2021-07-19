@@ -3,10 +3,11 @@ body {
   margin: 25px;
 }
 h1 {
-  font-size: 1.4em;
+  font-size: 1.3em;
+  text-align: center;
 }
 h2 {
-  font-size: 1.2em;
+  font-size: 1.1em;
   text-align: center;
 }
 
@@ -24,11 +25,12 @@ figure {
 @media screen and (min-width: 950px) {
   body {
     font-size:20px;
-    margin: 40px 60px;
+    margin: 30px 60px;
   }
 
   h1 {
     font-size: 2em;
+    text-align: start;
   }
 
   figure {
