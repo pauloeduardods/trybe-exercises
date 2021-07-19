@@ -25,6 +25,7 @@ body {
   display: flex;
   flex-basis: 500px;
   flex-grow: 1;
+  align-self: center;
 }
 
 .menu-container ul {
