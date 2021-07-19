@@ -40,7 +40,7 @@
 
 <div align="center">
 
-  ## Desenvolvimento Front-end
+  ## Desenvolvimento Front-end ❌️
 
 </div>
 
@@ -74,7 +74,7 @@
 
 <div align="center">
 
-  ## Desenvolvimento Back-end
+  ## Desenvolvimento Back-end ❌️
 
 </div>
 
@@ -119,24 +119,24 @@
 
 <div align="center">
 
-  ## Ciência da Computação
+  ## Ciência da Computação ❌️
 
 </div>
 
-#### Bloco 33: Arquitetura de Computadores & Redes
+#### Bloco 33: Arquitetura de Computadores & Redes ❌️
 - [ ] Projeto Explorando os protocolos
 
-#### Bloco 34: Introdução à Python & Raspagem de Dados da Web
+#### Bloco 34: Introdução à Python & Raspagem de Dados da Web ❌️
 - [ ] Projeto Tech news
 
-#### Bloco 35: Programação Orientada a Objetos & Padrões de Projeto 
+#### Bloco 35: Programação Orientada a Objetos & Padrões de Projeto ❌️
 - [ ] Projeto Relatórios de Estoque
 
-#### Bloco 36: Algoritmos & Estrutura de Dados
+#### Bloco 36: Algoritmos & Estrutura de Dados ❌️
 - [ ] Projeto Algoritmos
 
-#### Bloco 37: Estrutura de Dados: Hash & Set
+#### Bloco 37: Estrutura de Dados: Hash & Set ❌️
 - [ ] Projeto Restaurant Orders
 
-#### Bloco 38: Estrutura de Dados: Pilhas, Filas & Listas
+#### Bloco 38: Estrutura de Dados: Pilhas, Filas & Listas ❌️
 - [ ] Projeto TING - Trybe Is Not Google
