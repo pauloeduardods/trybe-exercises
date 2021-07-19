@@ -78,8 +78,14 @@ p strong {
   }
 }
 
-@media screen and (max-width: 650px) , (min-width:950px) {
+@media screen and (max-width: 650px) , screen and (min-width: 950px) {
   .card:nth-of-type(3) {
     display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  p.trick {
+    color: black;
   }
 }
