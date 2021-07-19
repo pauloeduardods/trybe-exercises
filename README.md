@@ -6,7 +6,7 @@
 
 </div>
 
-#### Bloco 1: Introdução - Unix & Shell &#9745;
+#### Bloco 1: Introdução - Unix & Shell (U+2714)
 
 #### Bloco 2: Git & GitHub heavy_check_mark
 
