@@ -83,3 +83,35 @@ footer {
     text-align: center;
   }
 }
+
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 25px;
+  }
+
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  header {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .aside-one, .aside-two {
+    width: 50%;
+    order: 0;
+  }
+  .main-content {
+    width: 100%;
+  }
+  
+  .main-content h1 {
+    font-size: 30px;
+  }
+
+  footer {
+    width: 100%;
+  }
+}
