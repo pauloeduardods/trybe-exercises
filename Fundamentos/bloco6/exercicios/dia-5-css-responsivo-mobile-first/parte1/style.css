@@ -40,6 +40,11 @@ figure {
 }
 
 @media screen and (min-width: 1400px) {
+  body {
+    margin: 35px 70px;
+    font-size: 25px;
+    max-width: 2000px;
+  }
   figure {
     justify-content: space-evenly;
   }
