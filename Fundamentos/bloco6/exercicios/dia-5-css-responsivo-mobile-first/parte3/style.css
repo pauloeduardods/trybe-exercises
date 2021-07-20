@@ -99,3 +99,37 @@
     display: block;
   }
 }
+
+@media screen and (max-width: 720px) {
+  #aside {
+    display: none;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  #navigation li a{
+    float: none;
+  }
+
+  #header {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+  }
+
+  #navigation {
+    position: relative;
+    top: 77px;
+    margin-bottom: 20px;
+  }
+
+  #content {
+    float: none;
+  }
+}
