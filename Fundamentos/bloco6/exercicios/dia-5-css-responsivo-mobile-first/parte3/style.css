@@ -80,3 +80,22 @@
   padding: 20px;
   height: 1%;
 }
+
+@media print {
+  #header {
+    display: none;
+  }
+
+  #navigation {
+    display: none;
+  }
+
+  #footer {
+    display: none;
+  }
+
+  #aside {
+    float: none;
+    display: block;
+  }
+}
