@@ -5,7 +5,7 @@ const factorial = number => {
     result = result * i;
   }
   return result;
-}
+};
 
 console.log(factorial(10));
 
@@ -16,6 +16,13 @@ const longestWord = string => {
     if (!longestWord || longestWord.length < words[i].length) longestWord = words[i];
   }
   return longestWord;
-}
+};
 
 console.log(longestWord('ola olaa olaaa olaaa olaaaaaaaaaaa olaaaaaaaaaaa'));
+
+const replaceX = (string, param) => string.replace('x', param);
+console.log(replaceX('Tryber x aqui!', 'Ice de Gelato'));
+
+
+const skills = ['javascript', 'html', 'css', 'dom', 'soft-skills'];
+
