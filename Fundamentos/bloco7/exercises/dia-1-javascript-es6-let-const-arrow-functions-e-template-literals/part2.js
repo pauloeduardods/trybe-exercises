@@ -23,6 +23,12 @@ console.log(longestWord('ola olaa olaaa olaaa olaaaaaaaaaaa olaaaaaaaaaaa'));
 const replaceX = (string, param) => string.replace('x', param);
 console.log(replaceX('Tryber x aqui!', 'Ice de Gelato'));
 
-
 const skills = ['javascript', 'html', 'css', 'dom', 'soft-skills'];
 
+const secondFunctions = (string, param) => {
+  string = replaceX(string, param);
+  let skillsSorted = skills.sort();
+  string += `${string} ${skillsSorted.join(' ')}`;
+  return string;
+};
+console.log(secondFunctions('Tryber x aqui!', 'Athanos'));
