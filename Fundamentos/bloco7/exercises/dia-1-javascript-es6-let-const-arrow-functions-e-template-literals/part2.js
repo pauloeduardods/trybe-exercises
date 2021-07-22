@@ -9,13 +9,13 @@ const factorial = number => {
 
 console.log(factorial(10));
 
-const bigWord = string => {
+const longestWord = string => {
   const words = string.split(' ');
-  let bigWord;
+  let longestWord;
   for (let i = 0; i < words.length; i += 1) {
-    if (!bigWord || bigWord.length < words[i].length) bigWord = words[i];
+    if (!longestWord || longestWord.length < words[i].length) longestWord = words[i];
   }
-  return bigWord;
+  return longestWord;
 }
 
-console.log(bigWord('ola olaa olaaa olaaa olaaaaaaaaaaa olaaaaaaaaaaa'));
+console.log(longestWord('ola olaa olaaa olaaa olaaaaaaaaaaa olaaaaaaaaaaa'));
