@@ -8,3 +8,14 @@ const factorial = number => {
 }
 
 console.log(factorial(10));
+
+const bigWord = string => {
+  const words = string.split(' ');
+  let bigWord;
+  for (let i = 0; i < words.length; i += 1) {
+    if (!bigWord || bigWord.length < words[i].length) bigWord = words[i];
+  }
+  return bigWord;
+}
+
+console.log(bigWord('ola olaa olaaa olaaa olaaaaaaaaaaa olaaaaaaaaaaa'));
