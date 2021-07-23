@@ -20,5 +20,4 @@ const lesson3 = {
 
 const addFunc = (object, param, value) => object[param] = value;
 
-addFunc(lesson2, 'sla', 'ola');
-console.log(lesson2);
+const listKeys = object => Object.keys(object);
