@@ -44,7 +44,6 @@ const teacherSubject = (object, name) => {
       resultObj.materia = resultArr;
     }
   }
-  
   for (let subject of resultArr) {
     if (!verifier.includes(subject)) {
       verifier.push(subject);
