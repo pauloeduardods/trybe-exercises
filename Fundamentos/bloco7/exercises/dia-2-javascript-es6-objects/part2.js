@@ -23,3 +23,7 @@ const addFunc = (object, param, value) => object[param] = value;
 const listKeys = object => Object.keys(object);
 
 const objectLength = object => Object.keys(object).length;
+
+const objectValues = object => Object.values(object);
+
+
