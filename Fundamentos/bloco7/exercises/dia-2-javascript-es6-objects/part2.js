@@ -17,3 +17,8 @@ const lesson3 = {
   professor: 'Maria Clara',
   turno: 'noite',
 };
+
+const addFunc = (object, param, value) => object[param] = value;
+
+addFunc(lesson2, 'sla', 'ola');
+console.log(lesson2);
