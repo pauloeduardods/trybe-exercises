@@ -24,7 +24,7 @@
 - [x] [Projeto Mistery Letter](https://pauloeduardods.github.io/projects/mistery-letter/)
 
 #### Bloco 06: HTML e CSS: Forms, Flexbox & Responsivo ✔️
-- [x] Projeto Trybewarts
+- [x] [Projeto Trybewarts](https://pauloeduardods.github.io/projects/trybewarts/)
 
 #### Bloco 07: Introdução à JavaScript ES6 & Testes Unitários ❌️
 - [ ] Projeto JavaScript Testes Unitários
