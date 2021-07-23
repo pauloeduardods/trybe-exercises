@@ -37,8 +37,13 @@ const students = object => {
   return total
 }
 
-const keyIndex = (object, index) => object[(Object.keys(object)[index])];
+const getValueByNumber = (object, index) => object[(Object.keys(object)[index])];
+
+const verifyPair = (object, key, value) => object[key] === value? true : false;
 
 console.log(students(allLessons));
 
-console.log(keyIndex(lesson1, 0));
+console.log(getValueByNumber(lesson1, 0));
+
+console.log(verifyPair(lesson3, 'turno', 'noite'));
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
