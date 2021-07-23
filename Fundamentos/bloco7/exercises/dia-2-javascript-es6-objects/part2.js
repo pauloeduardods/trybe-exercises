@@ -37,4 +37,8 @@ const students = object => {
   return total
 }
 
+const keyIndex = (object, index) => object[(Object.keys(object)[index])];
+
 console.log(students(allLessons));
+
+console.log(keyIndex(lesson1, 0));
