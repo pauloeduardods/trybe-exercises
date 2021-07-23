@@ -23,8 +23,8 @@
 - [x] [Projeto Color Guess](https://pauloeduardods.github.io/projects/color-guess/)
 - [x] [Projeto Mistery Letter](https://pauloeduardods.github.io/projects/mistery-letter/)
 
-#### Bloco 06: HTML e CSS: Forms, Flexbox & Responsivo ❌️
-- [ ] Projeto Trybewarts
+#### Bloco 06: HTML e CSS: Forms, Flexbox & Responsivo ✔️
+- [x] Projeto Trybewarts
 
 #### Bloco 07: Introdução à JavaScript ES6 & Testes Unitários ❌️
 - [ ] Projeto JavaScript Testes Unitários
