@@ -26,3 +26,16 @@ const listSkills = (student) => {
 };
 
 console.log(listSkills(student));
+
+const person = {
+  name:'Roberto',
+};
+
+const lastName = {
+  lastName: 'Silva',
+};
+
+const newPerson = Object.assign({},person,lastName); //ele serve para juntar 2 objetos, pois se  fizer const newObj = obj e alterar o "newObj" o obj tambem vai ser alterado, aquele meu erro la
+newPerson.name = 'Gilberto';                         //dai nesse caso ele junta 2 objects e um deles é vazio, fazendo com que voce de um real clone do obj
+console.log(newPerson);                              //para array seria const newArray = array.slice();
+console.log(person);
