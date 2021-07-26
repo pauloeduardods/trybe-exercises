@@ -24,4 +24,3 @@ assert.throws(() => {
 assert.throws(() => {
   sum(4, '5');
 }, /parameters must be numbers/);
-
