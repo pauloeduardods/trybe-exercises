@@ -10,3 +10,13 @@ const newEmployees = (func) => {
 };
 
 console.log(newEmployees(createUser));
+
+const compare = (random, number) => random === number;
+
+const result = (number, func) => {
+  const randomNum = Math.round(Math.random() * 5);
+  if (func(randomNum, number)) return 'Parabéns você ganhou';
+  return 'Tente novamente';
+}
+
+console.log(result(3, compare));
