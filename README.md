@@ -26,8 +26,8 @@
 #### Bloco 06: HTML e CSS: Forms, Flexbox & Responsivo ✔️
 - [x] [Projeto Trybewarts](https://pauloeduardods.github.io/projects/trybewarts/)
 
-#### Bloco 07: Introdução à JavaScript ES6 & Testes Unitários ❌️
-- [ ] Projeto JavaScript Testes Unitários
+#### Bloco 07: Introdução à JavaScript ES6 & Testes Unitários ✔️
+- [x] Projeto JavaScript Testes Unitários
 
 #### Bloco 08: Higher Order Functions do JavaScript ES6 ❌️
 - [ ] Projeto Zoo functions
