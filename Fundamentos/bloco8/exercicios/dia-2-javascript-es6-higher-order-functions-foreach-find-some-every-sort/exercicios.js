@@ -165,3 +165,12 @@ function everyoneWasBornOnSecXX() {
 }
 
 assert.strictEqual(everyoneWasBornOnSecXX(), expectedResult3);
+
+const expectedResult4 = true;
+
+function someBookWasReleaseOnThe80s() {
+  // escreva seu código aqui
+  return books.some(current => current.releaseYear >= 1980 && current.releaseYear <= 1990);
+}
+
+assert.strictEqual(someBookWasReleaseOnThe80s(), expectedResult4);
