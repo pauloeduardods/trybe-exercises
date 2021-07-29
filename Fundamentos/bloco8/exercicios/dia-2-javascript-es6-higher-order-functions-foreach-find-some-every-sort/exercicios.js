@@ -70,3 +70,19 @@ function authorBornIn1947() {
 }
 
 assert.strictEqual(authorBornIn1947(), 'Stephen King');
+
+function smallerName() {
+  let nameBook;
+  // escreva aqui o seu código
+  books.forEach(current => {
+    if (!nameBook) {
+      nameBook = current.name
+    } else if (nameBook.length >= current.name.length) {
+      nameBook = current.name;
+    }
+  })
+  // Variável nameBook que receberá o valor do menor nome;
+  return nameBook;
+}
+
+assert.strictEqual(smallerName(), 'Duna');
