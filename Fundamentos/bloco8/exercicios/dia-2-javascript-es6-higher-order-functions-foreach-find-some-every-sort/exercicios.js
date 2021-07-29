@@ -174,3 +174,18 @@ function someBookWasReleaseOnThe80s() {
 }
 
 assert.strictEqual(someBookWasReleaseOnThe80s(), expectedResult4);
+
+const expectedResult5 = false;
+
+function authorUnique() {
+  // escreva seu código aqui
+  const cache = [];
+  books.forEach((current) => {
+    const autorYear = current.author.birthYear
+    if (cache.includes(autorYear)) return true;
+    cache.push(autorYear)
+  });
+  return false;
+}
+
+assert.strictEqual(authorUnique(), expectedResult5);
