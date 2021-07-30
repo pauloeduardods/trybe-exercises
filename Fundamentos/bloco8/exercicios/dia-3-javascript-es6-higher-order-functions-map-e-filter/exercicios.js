@@ -150,7 +150,7 @@ assert.deepStrictEqual(fantasyOrScienceFiction(), expectedResult3);
 
 // ------------------  4  ------------------
 
-const expectedResult = [
+const expectedResult4 = [
   {
     id: 6,
     name: 'O Chamado de Cthulhu',
@@ -176,7 +176,7 @@ const expectedResult = [
 
 const oldBooksOrdered = () => books.filter(book => new Date().getFullYear() - book.releaseYear >= 60).sort((a, b) => a.releaseYear - b.releaseYear);
 
-assert.deepStrictEqual(oldBooksOrdered(), expectedResult);
+assert.deepStrictEqual(oldBooksOrdered(), expectedResult4);
 
 // ------------------  5  ------------------
 
@@ -190,3 +190,15 @@ const expectedResult5 = [
 const fantasyOrScienceFictionAuthors = () => fantasyOrScienceFiction().map(book => book.author.name).sort();
 
 assert.deepStrictEqual(fantasyOrScienceFictionAuthors(), expectedResult5);
+
+// ------------------  6  ------------------
+
+const expectedResult6 = [
+  'O Senhor dos Anéis',
+  'Fundação',
+  'O Chamado de Cthulhu',
+];
+
+const oldBooks = () => books.filter(book => new Date().getFullYear() - book.releaseYear > 60).map(book => book.name);
+
+assert.deepStrictEqual(oldBooks(), expectedResult6);
