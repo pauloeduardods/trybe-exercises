@@ -65,11 +65,15 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
+// ------------------  1  ------------------
+
 function authorBornIn1947() {
   return books.find(current => current.author.birthYear === 1947).author.name;
 }
 
 assert.strictEqual(authorBornIn1947(), 'Stephen King');
+
+// ------------------  2  ------------------
 
 function smallerName() {
   let nameBook;
@@ -86,6 +90,8 @@ function smallerName() {
 }
 
 assert.strictEqual(smallerName(), 'Duna');
+
+// ------------------  3  ------------------
 
 const expectedResult1 = {
   author: {
@@ -104,6 +110,8 @@ function getNamedBook() {
 }
 
 assert.deepStrictEqual(getNamedBook(), expectedResult1);
+
+// ------------------  4  ------------------
 
 const expectedResult2 = [
   {
@@ -157,6 +165,8 @@ function booksOrderedByReleaseYearDesc() {
 
 assert.deepStrictEqual(booksOrderedByReleaseYearDesc(), expectedResult2);
 
+// ------------------  5  ------------------
+
 const expectedResult3 = false;
 
 function everyoneWasBornOnSecXX() {
@@ -166,6 +176,8 @@ function everyoneWasBornOnSecXX() {
 
 assert.strictEqual(everyoneWasBornOnSecXX(), expectedResult3);
 
+// ------------------  6  ------------------
+
 const expectedResult4 = true;
 
 function someBookWasReleaseOnThe80s() {
@@ -174,6 +186,8 @@ function someBookWasReleaseOnThe80s() {
 }
 
 assert.strictEqual(someBookWasReleaseOnThe80s(), expectedResult4);
+
+// ------------------  7  ------------------
 
 const expectedResult5 = false;
 
