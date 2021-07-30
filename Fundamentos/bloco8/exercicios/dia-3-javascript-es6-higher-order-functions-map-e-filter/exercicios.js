@@ -174,7 +174,9 @@ const expectedResult4 = [
   },
 ];
 
-const oldBooksOrdered = () => books.filter(book => new Date().getFullYear() - book.releaseYear >= 60).sort((a, b) => a.releaseYear - b.releaseYear);
+const oldBooksOrdered = () => books
+  .filter(book => new Date().getFullYear() - book.releaseYear >= 60)
+  .sort((a, b) => a.releaseYear - b.releaseYear);
 
 assert.deepStrictEqual(oldBooksOrdered(), expectedResult4);
 
@@ -207,10 +209,6 @@ assert.deepStrictEqual(oldBooks(), expectedResult6);
 
 const expectedResult7 = 'O Senhor dos Anéis';
 
-const authorWith3DotsOnName = () => books.find(book => {
-  const nameSplited = book.author.name.split(' ');
-  const filtered = nameSplited.filter(subName => subName.length === 2 && subName.endsWith('.'));
-  return filtered.length >= 3 ? true : false;
-}).name;
+const authorWith3DotsOnName = () => books.find(book => book.author.name.split(' ').filter(subName => subName.length === 2 && subName.endsWith('.')).length === 3).name;
 
 assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult7);
