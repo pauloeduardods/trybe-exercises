@@ -83,3 +83,20 @@ function averageAge() {
 }
 
 assert.strictEqual(averageAge(), expectedResult3);
+
+// ------------------  4  ------------------
+
+const expectedResult4 = {
+  id: 1,
+  name: 'As Crônicas de Gelo e Fogo',
+  genre: 'Fantasia',
+  author: {
+    name: 'George R. R. Martin',
+    birthYear: 1948,
+  },
+  releaseYear: 1991,
+};
+
+const longestNamedBook = () => books.reduce((acc, cur) => acc.name.length > cur.name.length ? acc : cur);
+
+assert.deepStrictEqual(longestNamedBook(), expectedResult4);
