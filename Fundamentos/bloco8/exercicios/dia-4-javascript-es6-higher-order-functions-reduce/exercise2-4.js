@@ -65,11 +65,21 @@ const books = [
 
 // ------------------  2  ------------------
 
-const expectedResult = "George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.";
+const expectedResult2 = "George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.";
 
 const reduceNames = () => books.reduce((acc, cur, index) => {
   if (books.length === index + 1) return `${acc} ${cur.author.name}.`.trim();
   return `${acc} ${cur.author.name},`.trim();
 }, '');
 
-assert.strictEqual(reduceNames(), expectedResult);
+assert.strictEqual(reduceNames(), expectedResult2);
+
+// ------------------  3  ------------------
+
+const expectedResult3 = 43;
+
+function averageAge() {
+  return books.reduce((acc, cur) => acc + cur.releaseYear - cur.author.birthYear, 0) / books.length;
+}
+
+assert.strictEqual(averageAge(), expectedResult3);
