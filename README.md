@@ -29,7 +29,7 @@
 #### Bloco 07: Introdução à JavaScript ES6 & Testes Unitários ✔️
 - [x] Projeto JavaScript Testes Unitários
 
-#### Bloco 08: Higher Order Functions do JavaScript ES6 ❌️
+#### Bloco 08: Higher Order Functions do JavaScript ES6 ✔️
 - [ ] Projeto Zoo functions
 
 #### Bloco 09: JavaScript Assíncrono & Promises ❌️ 
