@@ -6,3 +6,7 @@ const reduce = (array, callback, initial) => {
 const arr = [1, 2, 3];
 
 console.log(reduce(arr, (acc, cur) => acc + cur, 0));
+console.log(reduce(arr, (acc, cur) => {
+  acc.push(cur);
+  return acc;
+}, []));
