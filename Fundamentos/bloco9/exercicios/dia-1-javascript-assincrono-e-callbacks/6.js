@@ -17,18 +17,10 @@ const handleError = (errorReason) =>
   console.log(`Error getting temperature: ${errorReason}`);
 
 // definição da função sendMarsTemperature...
+const sendMarsTemperature = (onSuccess, onError) => setTimeout(() => Math.random() <= 0.6 ? onSuccess(toFahrenheit(getMarsTemperature())) : onError('Robot is busy'), messageDelay());
 
 // imprime "It is currently 47ºF at Mars", por exemplo, ou "Error getting temperature: Robot is busy"
-//sendMarsTemperature(temperatureInFahrenheit, handleError);
+sendMarsTemperature(temperatureInFahrenheit, handleError);
 
 // imprime "Hi there! Curiosity here. Right now is 53ºC at Mars", por exemplo, ou "Error getting temperature: Robot is busy"
-//sendMarsTemperature(greet, handleError);
-
-const reduce = (array, callback, initial) => {
-  array.forEach(cur => initial = callback(initial, cur));
-  return initial;
-}
-
-const arr = [1,2,3];
-
-console.log(reduce(arr, (acc, cur) => acc + cur, 0));
+sendMarsTemperature(greet, handleError);
