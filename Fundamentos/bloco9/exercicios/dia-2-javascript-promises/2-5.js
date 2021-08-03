@@ -14,8 +14,5 @@ promise.then(result => {
   const dividers = [2, 3, 5, 10];
   return dividers.map(element => result / element);
 })
+  .then(result => console.log(result.reduce((acc, cur) => acc + cur, 0)))
   .catch(error => console.log('É mais de oito mil! Essa promise deve estar quebrada!' + error));
-
-const sum = new Promise((resolve, reject) => {
-  
-})
