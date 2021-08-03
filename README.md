@@ -32,7 +32,7 @@
 #### Bloco 08: Higher Order Functions do JavaScript ES6 ✔️
 - [ ] Projeto Zoo functions
 
-#### Bloco 09: JavaScript Assíncrono & Promises ❌️ 
+#### Bloco 09: JavaScript Assíncrono & Promises ✔️
 - [ ] Projeto Carrinho de compras
 
 #### Bloco 10: Testes automatizados com Jest ❌️
