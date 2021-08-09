@@ -39,7 +39,13 @@ const professionalBoard = [
 
 // Pesquisa
 const searchEmployee = (id, detail) => {
-  // Implemente seu código aqui
+  if (!id || !detail) throw new Error('No parameters');
+  let result = professionalBoard.find((cur) => cur.id === id);
+  console.log(result)
+  if (!result) throw new Error('ID não identificada');
+  result = result[detail];
+  if (!result) throw new Error('Informação indisponível');
+  return result;
 };
 
 module.exports = searchEmployee;
