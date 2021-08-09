@@ -15,5 +15,8 @@ describe('Exercicio2', () => {
   it ('1,2,3,4,5 must be a,e,i,o,u', () => {
     expect(decode('1,2,3,4,5')).toEqual('a,e,i,o,u');
   });
+  it ('other latters must not be converted', () => {
+    expect(encode('tyfgcvbdrwszxmklp')).toEqual('tyfgcvbdrwszxmklp');
+  });
 })
 
