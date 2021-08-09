@@ -18,5 +18,8 @@ describe('Exercicio2', () => {
   it ('other latters must not be converted', () => {
     expect(encode('tyfgcvbdrwszxmklp')).toEqual('tyfgcvbdrwszxmklp');
   });
+  it ('same character length', () => {
+    expect(encode('12411516').length).toEqual(8);
+  });
 })
 
