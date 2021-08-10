@@ -1,6 +1,7 @@
 const uppercase = require('../src/1');
 const getUserName = require('../src/2-3');
 const getRepos = require('../src/4');
+const getAnimal = require('../src/6');
 
 describe('teste exercicio 1 uppercase async', () => {
   it('uppercase ola mundo must be OLA MUNDO', (done) => {
@@ -51,4 +52,25 @@ describe('teste exercicio 4 getRepos', () => {
     const result = await getRepos('https://api.github.com/orgs/tryber/repos');
     expect(result.includes('sd-01-week4-5-project-meme-generator')).toBeTruthy();
   })
+});
+
+
+describe('Testando promise - findAnimalByName', () => {
+  describe('Quando existe o animal com o nome procurado', () => {
+    test('Retorne o objeto do animal', () => {
+      expect.assertions(1);
+      return getAnimal('Dorminhoco').then(animal => {
+        expect(animal).toEqual({ name: 'Dorminhoco', age: 1, type: 'Dog' });
+      });
+    });
+  });
+
+  describe('Quando não existe o animal com o nome procurado', () => {
+    test('Retorna um erro', () => {
+      expect.assertions(1);
+      return getAnimal('Bob').catch(error =>
+        expect(error).toEqual('Nenhum animal com esse nome!')
+      );
+    });
+  });
 });
