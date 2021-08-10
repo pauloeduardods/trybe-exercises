@@ -51,4 +51,4 @@ describe('teste exercicio 4 getRepos', () => {
     const result = await getRepos('https://api.github.com/orgs/tryber/repos');
     expect(result.includes('sd-01-week4-5-project-meme-generator')).toBeTruthy();
   })
-})
+});
