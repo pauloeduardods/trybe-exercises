@@ -14,7 +14,7 @@ describe('teste exercicio 1 uppercase async', () => {
   });
 });
 
-describe('teste exercicio 2-3 findUserById and getUserName', () => {
+describe('teste exercicio 2-3 findUserById and getUserName - promisse', () => {
   it('getUserName find user', () => (
     getUserName(1).then((res) => expect(res).toEqual('Mark'))
   ));
@@ -22,4 +22,21 @@ describe('teste exercicio 2-3 findUserById and getUserName', () => {
     expect.assertions(1);
     return getUserName(10).catch((error) => expect(error).toEqual(new Error('User with 10 not found.')))
   })
+});
+
+describe('teste exercicio 2-3 findUserById and getUserName - promisse', () => {
+  it('getUserName find user', async () => {
+    expect(await getUserName(1)).toEqual('Mark');
+    // ||
+    const res = await getUserName(2);
+    expect(res).toEqual('Paul');
+  });
+  it('getUserName not find user', async () => {
+    expect.assertions(1)
+    try {
+      await getUserName(10);
+    } catch (error) {
+      expect(error).toEqual(new Error('User with 10 not found.'));
+    }
+  });
 });
