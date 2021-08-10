@@ -1,5 +1,6 @@
 const uppercase = require('../src/1');
 const getUserName = require('../src/2-3');
+const getRepos = require('../src/4');
 
 describe('teste exercicio 1 uppercase async', () => {
   it('uppercase ola mundo must be OLA MUNDO', (done) => {
@@ -14,7 +15,7 @@ describe('teste exercicio 1 uppercase async', () => {
   });
 });
 
-describe('teste exercicio 2-3 findUserById and getUserName - promisse', () => {
+describe('teste exercicio 2 findUserById and getUserName - promisse', () => {
   it('getUserName find user', () => (
     getUserName(1).then((res) => expect(res).toEqual('Mark'))
   ));
@@ -24,7 +25,7 @@ describe('teste exercicio 2-3 findUserById and getUserName - promisse', () => {
   })
 });
 
-describe('teste exercicio 2-3 findUserById and getUserName - promisse', () => {
+describe('teste exercicio 3 findUserById and getUserName - async/await', () => {
   it('getUserName find user', async () => {
     expect(await getUserName(1)).toEqual('Mark');
     // ||
@@ -40,3 +41,14 @@ describe('teste exercicio 2-3 findUserById and getUserName - promisse', () => {
     }
   });
 });
+
+describe('teste exercicio 4 getRepos', () => {
+  it('check for repositories sd-01-week4-5-project-todo-list', async () => {
+    const result = await getRepos('https://api.github.com/orgs/tryber/repos');
+    expect(result.includes('sd-01-week4-5-project-todo-list')).toBeTruthy();
+  });
+  it('check for repositories sd-01-week4-5-project-meme-generator', async () => {
+    const result = await getRepos('https://api.github.com/orgs/tryber/repos');
+    expect(result.includes('sd-01-week4-5-project-meme-generator')).toBeTruthy();
+  })
+})
