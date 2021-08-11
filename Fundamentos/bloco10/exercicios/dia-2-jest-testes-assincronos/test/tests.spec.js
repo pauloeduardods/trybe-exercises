@@ -1,7 +1,7 @@
 const uppercase = require('../src/1');
 const getUserName = require('../src/2-3');
 const getRepos = require('../src/4');
-const getAnimal = require('../src/6');
+const { getAnimal, findAnimalByAge } = require('../src/6');
 
 describe('teste exercicio 1 uppercase async', () => {
   it('uppercase ola mundo must be OLA MUNDO', (done) => {
@@ -56,8 +56,8 @@ describe('teste exercicio 4 getRepos', () => {
 
 
 describe('Testando promise - findAnimalByName', () => {
-  describe('Quando existe o animal com o nome procurado', () => {
-    test('Retorne o objeto do animal', () => {
+  describe('When exists animal searched', () => {
+    test('return animal Obj', () => {
       expect.assertions(1);
       return getAnimal('Dorminhoco').then(animal => {
         expect(animal).toEqual({ name: 'Dorminhoco', age: 1, type: 'Dog' });
@@ -65,12 +65,27 @@ describe('Testando promise - findAnimalByName', () => {
     });
   });
 
-  describe('Quando não existe o animal com o nome procurado', () => {
-    test('Retorna um erro', () => {
+  describe('When not exists animal searched', () => {
+    test('Return error', () => {
       expect.assertions(1);
       return getAnimal('Bob').catch(error =>
         expect(error).toEqual('Nenhum animal com esse nome!')
       );
     });
+  });
+});
+
+describe('Exercicio 6.2', () => {
+  it('When find animal', async () => {
+    expect.assertions(1);
+    return expect(await findAnimalByAge(5)).toEqual([{ name: 'Preguiça', age: 5, type: 'Cat' }]);
+  });
+  it('When not find animal return error', async () => {
+    expect.assertions(1);
+    try {
+      await findAnimalByAge(100);
+    } catch (error) {
+      return expect(error).toEqual(new Error('Nao tem animal com essa idade'));
+    }
   });
 });

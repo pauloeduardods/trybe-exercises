@@ -4,9 +4,12 @@ const Animals = [
   { name: 'Preguiça', age: 5, type: 'Cat' },
 ];
 
-// const findAnimalByName = (name) => (
-//   // Adicione o código aqui.
-// );
+const findAnimalByAge = (age) => {
+  return new Promise((resolve, reject) => {
+    const result = Animals.filter((cur) => cur.age === age);
+    return result.length !== 0 ? resolve(result) : reject(new Error('Nao tem animal com essa idade'));
+  })
+}
 
 const getAnimal = (name) => {
   return new Promise((resolve, reject) => {
@@ -20,4 +23,4 @@ const getAnimal = (name) => {
 };
 // ---------------------
 
-module.exports = getAnimal ;
+module.exports = { getAnimal, findAnimalByAge };
