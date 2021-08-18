@@ -15,5 +15,6 @@ describe('exercicios', () => {
   it('exercicio4', () => {
     dividir = jest.fn().mockImplementation(() => 15);
     expect(dividir(2,3)).toBe(15);
+    expect(dividir).toHaveBeenCalledTimes(1);
   });
 });
