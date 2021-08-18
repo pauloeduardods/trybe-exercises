@@ -11,5 +11,9 @@ describe('exercicios', () => {
   it('exercicio3', () => {
     somar = jest.fn().mockImplementation((a, b) => (a + b));
     expect(somar(1, 2)).toBe(3);
-  })
+  });
+  it('exercicio4', () => {
+    dividir = jest.fn().mockImplementation(() => 15);
+    expect(dividir(2,3)).toBe(15);
+  });
 });
