@@ -1,4 +1,5 @@
 let { somar, subtrair, multiplicar, dividir } = require('./exercicio');
+const math = require('./exercicio');
 
 describe('exercicios', () => {
   it('exercicio1', () => {
@@ -16,5 +17,13 @@ describe('exercicios', () => {
     dividir = jest.fn().mockImplementation(() => 15);
     expect(dividir(2,3)).toBe(15);
     expect(dividir).toHaveBeenCalledTimes(1);
+  });
+  it('exercicio5', () => {
+    const mock = jest.spyOn(math, 'subtrair');
+    expect(math.subtrair(20, 5)).toBe(15);
+    mock.mockImplementation(() => 20);
+    expect(math.subtrair(100,20)).toBe(20);
+    mock.mockRestore();
+    expect(math.subtrair(10, 5)).toBe(5);
   });
 });
