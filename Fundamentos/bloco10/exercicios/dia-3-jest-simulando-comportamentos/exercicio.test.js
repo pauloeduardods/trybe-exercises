@@ -67,5 +67,9 @@ describe('exercises', () => {
       exercicios.request.mockRejectedValue('Error');
       return expect(exercicios.request()).rejects.toBe('Error');
     });
-  })
+  });
+  it('bonus', () => {
+    exercicios.bonus = jest.fn(() => Promise.resolve('Joke'));
+    return expect(exercicios.bonus()).resolves.toBe('Joke')
+  });
 });

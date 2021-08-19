@@ -1,5 +1,7 @@
 const fetch = require('node-fetch')
 
+const API_URL = 'https://icanhazdadjoke.com/';
+
 const randomNumber = () => {
   return Math.round(Math.random() * 100);
 };
@@ -17,4 +19,10 @@ function request() {
   ); 
 }
 
-module.exports = { randomNumber, func1, func2, func3, request };
+function bonus() {
+  return fetch(API_URL, { headers: { Accept: 'application/json' } })
+    .then(response => response.json())
+    .then(data => data.joke);
+}
+
+module.exports = { randomNumber, func1, func2, func3, request, bonus };
