@@ -50,4 +50,22 @@ describe('exercises', () => {
       expect(exercicios.func3('azy', 'bzy', 'czy')).toBe('azybzyczy');
     });
   });
+  describe('exercicio6', () => {
+    exercicios.request = jest.fn();
+    afterEach(exercicios.request.mockReset);
+    it('resolve', () => {
+      exercicios.request.mockResolvedValue({
+        "message": "https://images.dog.ceo/breeds/clumber/n02101556_3878.jpg",
+        "status": "success"
+      });
+      return expect(exercicios.request()).resolves.toEqual({
+        "message": "https://images.dog.ceo/breeds/clumber/n02101556_3878.jpg",
+        "status": "success"
+      })
+    });
+    it('reject', () => {
+      exercicios.request.mockRejectedValue('Error');
+      return expect(exercicios.request()).rejects.toBe('Error');
+    });
+  })
 });

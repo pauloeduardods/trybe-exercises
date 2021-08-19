@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/jest": "^27.0.1"
+    "@types/jest": "^27.0.1",
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "jest": "^27.0.6"
