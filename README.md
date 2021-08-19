@@ -35,7 +35,7 @@
 #### Bloco 09: JavaScript Assíncrono & Promises ✔️
 - [x] Projeto Carrinho de compras
 
-#### Bloco 10: Testes automatizados com Jest ❌️
+#### Bloco 10: Testes automatizados com Jest ✔️
 - [ ] Projeto Jest Assíncrono e Mocking
 
 <div align="center">
