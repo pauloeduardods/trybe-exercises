@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  ## Fundamentos do desenvolvimento Web ❌️
+  ## Fundamentos do desenvolvimento Web ✔️
 
 </div>
 
