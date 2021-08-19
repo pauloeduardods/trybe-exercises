@@ -12,6 +12,12 @@ describe('exercises', () => {
     mock.mockImplementationOnce(() => 10)
     mock.mockImplementationOnce((a, b) => a / b);
     expect(mock(200, 10)).toBe(10);
-    expect(mock(200, 10)).toBe(20)
-  })
+    expect(mock(200, 10)).toBe(20);
+  });
+  it('exercicio3', () => {
+    exercicios.randomNumber = jest.fn().mockImplementation((a, b, c) => a * b * c);
+    expect(exercicios.randomNumber(1,2,3)).toBe(6);
+    exercicios.randomNumber.mockReset();
+    expect(exercicios.randomNumber()).not.toBe(101);
+  });
 });
