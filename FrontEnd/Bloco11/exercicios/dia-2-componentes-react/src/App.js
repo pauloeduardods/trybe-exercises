@@ -4,7 +4,7 @@ import pokemons from './data';
 export default function App() {
   return (
     <>
-      <section>
+      <section className="container">
         <DisplayPokemon pokemons={pokemons} />
       </section>
     </>

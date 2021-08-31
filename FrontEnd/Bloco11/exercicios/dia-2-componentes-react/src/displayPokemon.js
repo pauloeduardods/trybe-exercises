@@ -1,22 +1,27 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
-function processObject({ name, type, averageWeight }) {
+function processObject({ name, type, averageWeight, image }) {
   return (
-  <div>
+  <div className="col-sm-6 col-lg-4">
     <p>{name}</p>
     <p>{type}</p>
-      <p>Average Weight: {`${averageWeight.value} ${averageWeight.measurementUnit}`}</p>
-  </ div>
+    <p>Average Weight: {`${averageWeight.value} ${averageWeight.measurementUnit}`}</p>
+      <img src={image} alt={`${name} Image`}></img>
+  </div>
   );
 }
 
 export default class DisplayPokemon extends Component {
   render() {
-    const { pokemons } = this.props;
     return (
-    <>
-      {pokemons.map((pokemon) => processObject(pokemon))}
-    </>
+    <section className="container row">
+        {this.props.pokemons.map((pokemon) => processObject(pokemon))}
+    </section>
     );
   }
+}
+
+DisplayPokemon.protoTypes = {
+  pokemons: PropTypes.array.isRequired,
 }
