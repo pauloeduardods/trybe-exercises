@@ -1,13 +1,17 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-function processObject({ name, type, averageWeight, image }) {
+function processObject({ name, type, averageWeight, image, moreInfo }) {
   return (
   <div className="col-sm-6 col-lg-4">
-    <p>{name}</p>
-    <p>{type}</p>
-    <p>Average Weight: {`${averageWeight.value} ${averageWeight.measurementUnit}`}</p>
-      <img src={image} alt={`${name} Image`}></img>
+    <a href={moreInfo} className="row">
+      <div className="col-7">
+        <p className="fs-4">{name}</p>
+        <p className="fs-6">{type}</p>
+        <p className="fs-6">Average Weight: {`${averageWeight.value} ${averageWeight.measurementUnit}`}</p>
+      </div>
+      <img className="col-5" src={image} alt={`${name} Image`}></img>
+    </a>
   </div>
   );
 }
