@@ -5,7 +5,7 @@ function processObject({ name, type, averageWeight, image, moreInfo }) {
   return (
     <div className="col-sm-6 col-lg-4">
       <div className="mx-1 my-2 rounded-3 border border-2 border-black" >
-        <a href={moreInfo} className="container row">
+        <a href={moreInfo} className="container row text-reset text-decoration-none">
           <div className="col-7">
             <p className="fs-4">{name}</p>
             <p className="fs-6">{type}</p>
