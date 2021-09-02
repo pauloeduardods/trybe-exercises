@@ -7,16 +7,23 @@ class Button extends React.Component {
       clickNum: 0,
     }
     this.sum = this.sum.bind(this);
+    this.subtract = this.subtract.bind(this);
   }
   sum() {
-    this.setState((lastThis) => ({
-      clickNum: lastThis.clickNum + 1,
-    }))
+    this.setState((lastState) => ({
+      clickNum: lastState.clickNum + 1,
+    }));
+  }
+  subtract() {
+    this.setState((lastState) => ({
+      clickNum: lastState.clickNum - 1,
+    }));
   }
   render() {
     return (
       <div>
         <input type="button" onClick={this.sum} value={this.state.clickNum} />
+        <input type="button" onClick={this.subtract} value={this.state.clickNum} />
       </div>
     );
   }
