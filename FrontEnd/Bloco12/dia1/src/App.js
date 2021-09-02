@@ -1,11 +1,9 @@
-function handleClick() {
-  console.log(2);
-}
+import Button from "./components/buttons";
 
 export default function App() {
   return (
     <>
-    <button onClick={handleClick}>Console.log(2)</button>
+    <Button />
     </>
   );
 }
