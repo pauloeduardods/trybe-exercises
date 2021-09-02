@@ -1,20 +1,22 @@
 import React from 'react';
 
 class Button extends React.Component {
-  current = 0
   constructor () {
     super();
+    this.state = {
+      clickNum: 0,
+    }
     this.sum = this.sum.bind(this);
   }
   sum() {
-    this.current += 2;
-    console.log(this.current);
+    this.setState((lastThis) => ({
+      clickNum: lastThis.clickNum + 1,
+    }))
   }
   render() {
-    console.log(this.current);
     return (
       <div>
-        <input type="button" onClick={this.sum} value="+2" />
+        <input type="button" onClick={this.sum} value={this.state.clickNum} />
       </div>
     );
   }
