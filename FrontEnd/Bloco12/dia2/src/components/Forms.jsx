@@ -9,10 +9,12 @@ class Forms extends React.Component {
       age: 0,
       email: '',
       password: '',
+      remember: false,
     }
   }
   saveChange({target}) {
-    const { name, value } = target;
+    const { name } = target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
     this.setState({
       [name]: value
     });
@@ -24,6 +26,10 @@ class Forms extends React.Component {
         <input type="email"  name="email" placeholder="Email" />
         <input type="number" name="age" placeholder="Age" />
         <input type="password"  name="password" placeholder="Password" />
+        <label>
+          <input type="checkbox" name="remember" />
+          Lembrar
+        </label>
       </section>
     )
   }
