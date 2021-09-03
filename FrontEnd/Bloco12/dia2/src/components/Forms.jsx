@@ -24,7 +24,7 @@ class Forms extends React.Component {
   }
   render() {
     return (
-      <section onChange={this.saveChange}>
+      <form onChange={this.saveChange}>
         <fieldset>
           <input type="text" name="name" placeholder="Name" />
           <input type="email" name="email" placeholder="Email" />
@@ -36,7 +36,7 @@ class Forms extends React.Component {
           Lembrar
         </label>
         <input type="file" name="file" ref={this.fileInput} />
-      </section>
+      </form>
     )
   }
 }
