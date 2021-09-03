@@ -1,9 +1,19 @@
 import React from 'react';
 
-class Forms extends React.Component {
-  constructor() {
-    super();
+class Selector extends React.Component {
+  render() { 
+    return (
+      <select name={this.props.name}>
+        {this.props.states.states.map((state) => <option value={state} key={state}>{Object.values(state)[0]}</option>)}
+      </select>
+    );
   }
+}
+
+class Forms extends React.Component {
+  // constructor() {
+  //   super();
+  // }
   render() {
     return (
       <form>
@@ -16,7 +26,7 @@ class Forms extends React.Component {
           <input name="address" id="address" placeholder="Endereco" maxLength="200" required />
           <label htmlFor="city">Cidade: </label>
           <input name="city" id="city" placeholder="Cidade" maxLength="28" required/>
-          {}
+          <Selector states={this.props.statesObj} name="state" />
         </fieldset>
       </form>
     );

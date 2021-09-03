@@ -1,8 +1,9 @@
 import Forms from "./components/Forms";
+import states from "./states";
 
 function App() {
   return(
-    <Forms />
+    <Forms statesObj={states} />
   );
 }
 
