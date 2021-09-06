@@ -5,7 +5,7 @@ class StateSelector extends React.Component {
     super(props);
     this.handleChange = this.handleChange.bind(this);
      this.state = {
-      state: props.states.states[0].uf,
+      state: '',
       city: ''
     };
   }
@@ -14,19 +14,20 @@ class StateSelector extends React.Component {
   }
   render() { 
     const { states } = this.props;
-    //console.log(states.states.filter((curState) => state ? curState.state === state : true));
     return (
       <div>
-        <label htmlFor="state">Estado: </label>
-        <select id="state" name="state" onChange={this.handleChange} >
-          {states.states.map((state) => <option name="state" value={state.uf} key={`${state.name}-${state.uf}`}>{`${state.name}: ${state.uf}`}</option>)}
-        </select>
-        <label htmlFor="city">Cidade: </label>
-        <select name="city" id="city">
-          { states.states
-            .find((state) => state.uf === this.state.state).cities
-            .map((cur, index) => <option value={cur} key={`${cur}-${index}`}>{cur}</option>) }
-        </select>
+        <input type="text" list="state" placeholder="Estado" />
+        <datalist id="state" name="state" onChange={this.handleChange} >
+          {states.states.map((state) => 
+            <option name="state" value={state.name.normalize('NFD').replace(/[\u0300-\u036f]/g, "")} key={state.name} />)}
+        </datalist>
+        <input type="text" list="town" placeholder="Cidade"/>
+        <datalist id="town" name="city" >
+          <option value="Selecione uma cidade" />
+          {states.states.filter((state) => this.state.state ? state.name === this.state.state : true)
+            .map((cur) => 
+            cur.cities.map((cur) => <option key={cur} value={ cur.normalize('NFD').replace(/[\u0300-\u036f]/g, "") } />))}
+        </datalist>
       </div>
     );
   }
