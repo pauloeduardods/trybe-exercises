@@ -10,6 +10,7 @@ class StateSelector extends React.Component {
     };
   }
   handleChange({ target }) {
+    console.log(target)
     this.setState({ [target.name]: target.value })
   }
   render() { 
@@ -17,16 +18,26 @@ class StateSelector extends React.Component {
     return (
       <div>
         <input type="text" list="state" placeholder="Estado" />
-        <datalist id="state" name="state" onChange={this.handleChange} >
+        <datalist id="state" name="state" >
           {states.states.map((state) => 
-            <option name="state" value={state.name.normalize('NFD').replace(/[\u0300-\u036f]/g, "")} key={state.name} />)}
+            <option
+              name="state"
+              value={state.name.normalize('NFD').replace(/[\u0300-\u036f]/g, "")}
+              key={state.name}
+              onChange={this.handleChange} />)}
         </datalist>
         <input type="text" list="town" placeholder="Cidade"/>
         <datalist id="town" name="city" >
           <option value="Selecione uma cidade" />
           {states.states.filter((state) => this.state.state ? state.name === this.state.state : true)
             .map((cur) => 
-            cur.cities.map((cur) => <option key={cur} value={ cur.normalize('NFD').replace(/[\u0300-\u036f]/g, "") } />))}
+            cur.cities.map((cur, index) => 
+              <option
+              key={cur + index}
+              value={ cur.normalize('NFD').replace(/[\u0300-\u036f]/g, "") }
+              onClick={this.handleChange}
+              onKeyPress={this.handleChange}
+              onChange={this.handleChange} />))}
         </datalist>
       </div>
     );
