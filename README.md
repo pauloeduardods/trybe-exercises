@@ -44,17 +44,17 @@
 
 </div>
 
-#### Bloco 11: Introdução à React ❌️
-- [ ] Projeto Movie Cards Library
+#### Bloco 11: Introdução à React ✔️
+- [x] Projeto Movie Cards Library
 
 
-#### Bloco 12: Componentes com Estado, Eventos & Formulários com React ❌️
-- [ ] Projeto Movie Cards Library Stateful
+#### Bloco 12: Componentes com Estado, Eventos & Formulários com React ✔️
+- [x] Projeto Movie Cards Library Stateful
 
-#### Bloco 13: Ciclo de Vida de Componentes & React Router ❌️
-- [ ] Projeto Movie Cards Library CRUD
+#### Bloco 13: Ciclo de Vida de Componentes & React Router ✔️
+- [x] Projeto Movie Cards Library CRUD
 
-#### Bloco 14: Metodologias Ágeis ❌️
+#### Bloco 14: Metodologias Ágeis ✔️
 - [ ] Projeto Frontend Online Store
 
 #### Bloco 15: Testes automatizados com React Testing Library ❌️
