@@ -55,7 +55,7 @@
 - [x] Projeto Movie Cards Library CRUD
 
 #### Bloco 14: Metodologias Ágeis ✔️
-- [ ] Projeto Frontend Online Store
+- [x] Projeto Frontend Online Store
 
 #### Bloco 15: Testes automatizados com React Testing Library ❌️
 - [ ] Projeto Testes em React
