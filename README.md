@@ -53,6 +53,7 @@
 
 #### Bloco 13: Ciclo de Vida de Componentes & React Router ✔️
 - [x] Projeto Movie Cards Library CRUD
+- [x] Projeto TrybeTunes
 
 #### Bloco 14: Metodologias Ágeis ✔️
 - [x] Projeto Frontend Online Store
