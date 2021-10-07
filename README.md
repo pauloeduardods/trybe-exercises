@@ -58,8 +58,8 @@
 #### Bloco 14: Metodologias Ágeis ✔️
 - [x] Projeto Frontend Online Store
 
-#### Bloco 15: Testes automatizados com React Testing Library ❌️
-- [ ] Projeto Testes em React
+#### Bloco 15: Testes automatizados com React Testing Library ✔️
+- [x] Projeto Testes em React
 
 #### Bloco 16: Gerenciamento de estado com Redux ❌️
 - [ ] Projeto Trybe Wallet
