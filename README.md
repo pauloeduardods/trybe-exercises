@@ -61,8 +61,8 @@
 #### Bloco 15: Testes automatizados com React Testing Library ✔️
 - [x] Projeto Testes em React
 
-#### Bloco 16: Gerenciamento de estado com Redux ❌️
-- [ ] Projeto Trybe Wallet
+#### Bloco 16: Gerenciamento de estado com Redux ✔️
+- [x] Projeto Trybe Wallet
 
 #### Bloco 17: Projeto Jogo de Trivia ❌️
 - [ ] Projeto Jogo de Trivia
