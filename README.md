@@ -53,7 +53,6 @@
 - [x] [Projeto Movie Cards Library Stateful](https://pauloeduardods.github.io/MovieCards/)
 
 #### Bloco 13: Ciclo de Vida de Componentes & React Router ✔️
-- [x] Projeto Movie Cards Library CRUD
 - [x] [Projeto TrybeTunes](https://pauloeduardods.github.io/TrybeTunes/)
 
 #### Bloco 14: Metodologias Ágeis ✔️
