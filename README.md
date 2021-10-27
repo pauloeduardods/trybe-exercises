@@ -64,8 +64,8 @@
 #### Bloco 16: Gerenciamento de estado com Redux ✔️
 - [x] Projeto Trybe Wallet
 
-#### Bloco 17: Projeto Jogo de Trivia ❌️
-- [ ] Projeto Jogo de Trivia
+#### Bloco 17: Projeto Jogo de Trivia ✔️
+- [x] Projeto Jogo de Trivia
 
 #### Bloco 18: Context API & React Hooks ❌️
 - [ ] Projeto StarWars Datatable com Context API e Hooks
