@@ -37,6 +37,7 @@
 
 #### Bloco 10: Testes automatizados com Jest ✔️
 - [x] Projeto Jest Assíncrono e Mocking
+- [x] [Hackaton](https://pauloeduardods.github.io/projects/hackaton/public/)
 
 <div align="center">
 
@@ -45,27 +46,27 @@
 </div>
 
 #### Bloco 11: Introdução à React ✔️
-- [x] Projeto Movie Cards Library
+- [x] [Projeto Movie Cards Library](https://pauloeduardods.github.io/MovieCardsLibrary/)
 
 
 #### Bloco 12: Componentes com Estado, Eventos & Formulários com React ✔️
-- [x] Projeto Movie Cards Library Stateful
+- [x] [Projeto Movie Cards Library Stateful](https://pauloeduardods.github.io/MovieCards/)
 
 #### Bloco 13: Ciclo de Vida de Componentes & React Router ✔️
 - [x] Projeto Movie Cards Library CRUD
-- [x] Projeto TrybeTunes
+- [x] [Projeto TrybeTunes](https://pauloeduardods.github.io/TrybeTunes/)
 
 #### Bloco 14: Metodologias Ágeis ✔️
-- [x] Projeto Frontend Online Store
+- [x] [Projeto Frontend Online Store](https://pauloeduardods.github.io/frontend-online-store/)
 
 #### Bloco 15: Testes automatizados com React Testing Library ✔️
 - [x] Projeto Testes em React
 
 #### Bloco 16: Gerenciamento de estado com Redux ✔️
-- [x] Projeto Trybe Wallet
+- [x] [Projeto Trybe Wallet](https://pauloeduardods.github.io/TrybeWallet/)
 
 #### Bloco 17: Projeto Jogo de Trivia ✔️
-- [x] Projeto Jogo de Trivia
+- [x] [Projeto Jogo de Trivia](https://pauloeduardods.github.io/Trivia-React-Redux/)
 
 #### Bloco 18: Context API & React Hooks ❌️
 - [ ] Projeto StarWars Datatable com Context API e Hooks
