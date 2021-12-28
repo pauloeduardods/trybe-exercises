@@ -41,7 +41,7 @@
 
 <div align="center">
 
-  ## Desenvolvimento Front-end ❌️
+  ## Desenvolvimento Front-end ✔️
 
 </div>
 
@@ -67,11 +67,11 @@
 #### Bloco 17: Projeto Jogo de Trivia ✔️
 - [x] [Projeto Jogo de Trivia](https://pauloeduardods.github.io/Trivia-React-Redux/)
 
-#### Bloco 18: Context API & React Hooks ❌️
-- [ ] Projeto StarWars Datatable com Context API e Hooks
+#### Bloco 18: Context API & React Hooks ✔️
+- [x] [Projeto StarWars Datatable com Context API e Hooks](https://pauloeduardods.github.io/StarwarsPlanetsSearch/)
 
-#### Bloco 19: Projeto App de Receitas ❌️
-- [ ] Projeto App de Receitas
+#### Bloco 19: Projeto App de Receitas ✔️
+- [x] [Projeto App de Receitas](https://www.pauloedsg.com/recipes-app)
 
 <div align="center">
 
@@ -79,8 +79,12 @@
 
 </div>
 
+#### Novo Bloco 20: Docker
+
+- [x] Primeiro projeto em docker
+
 #### Bloco 20: Introdução à SQL ❌️
-- [ ] Projeto All For One
+- [x] Projeto All For One
 
 #### Bloco 21: Funções SQL, Joins & Subqueries ❌️
 - [ ] Projeto Vocabulary Booster
